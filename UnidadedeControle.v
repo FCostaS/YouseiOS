@@ -292,6 +292,76 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			TypeJR   = 1'B0;
 			end
 			
+			6'B010101: // BEGIN_FILE
+			begin
+			OpIO 		= 1'B0;
+			RegDst 	= 1'B0;
+			RegWrite = 1'B0;
+			AluSrc 	= 1'B0;
+			Mem2Reg 	= 2'B10;
+			MemRead 	= 1'B0;
+			MemWrite = 1'B0;
+			Desvio 	= 1'B0;
+			OpALU 	= 6'B000000;
+			TypeJR   = 1'B0;
+			end
+			
+			6'B010110: // END_FILE
+			begin
+			OpIO 		= 1'B0;
+			RegDst 	= 1'B0;
+			RegWrite = 1'B0;
+			AluSrc 	= 1'B0;
+			Mem2Reg 	= 2'B10;
+			MemRead 	= 1'B0;
+			MemWrite = 1'B0;
+			Desvio 	= 1'B0;
+			OpALU 	= 6'B000000;
+			TypeJR   = 1'B0;
+			end
+			
+			6'B010111: // HD_HEAD
+			begin
+			OpIO 		= 1'B0;
+			RegDst 	= 1'B0;
+			RegWrite = 1'B0;
+			AluSrc 	= 1'B0;
+			Mem2Reg 	= 2'B10;
+			MemRead 	= 1'B0;
+			MemWrite = 1'B0;
+			Desvio 	= 1'B0;
+			OpALU 	= 6'B000000;
+			TypeJR   = 1'B0;
+			end
+			
+			6'B011000: // HD_END
+			begin
+			OpIO 		= 1'B0;
+			RegDst 	= 1'B0;
+			RegWrite = 1'B0;
+			AluSrc 	= 1'B0;
+			Mem2Reg 	= 2'B10;
+			MemRead 	= 1'B0;
+			MemWrite = 1'B0;
+			Desvio 	= 1'B0;
+			OpALU 	= 6'B000000;
+			TypeJR   = 1'B0;
+			end
+			
+			6'B011001: // HALT
+			begin
+			OpIO 		= 1'B0;
+			RegDst 	= 1'B0;
+			RegWrite = 1'B0;
+			AluSrc 	= 1'B0;
+			Mem2Reg 	= 2'B10;
+			MemRead 	= 1'B0;
+			MemWrite = 1'B0;
+			Desvio 	= 1'B0;
+			OpALU 	= 6'B000000;
+			TypeJR   = 1'B0;
+			end
+			
 			default: // Not operation
 			begin
 			OpIO 		= 1'B0;

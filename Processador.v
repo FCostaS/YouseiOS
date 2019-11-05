@@ -1,10 +1,13 @@
-module Processador(Clock,Reset,Type,Set,Swap,Switches,OutputData);
-	input Clock,Reset,Set,Swap,Type;
+//module Processador(Clock,Reset,Type,Set,Swap,Switches,OutputData);
+module Processador(Clock, Reset, Switches, OutputData, Endereco, Instrucao);
+	
+	input Clock,Reset;
 	input [12:0] Switches;
-	output [31:0] OutputData;
+	output [31:0] OutputData, Endereco;
+	input [31:0] Instrucao;
 	
 	wire[31:0] Resultado,ImediatoExtendido,Offset,DataIO,ReadData,ResultadoSoma,OutADD,
-	InputPC,Saida_Dados_2,Endereco,Instrucao,M2R,Dados_1,Dados_2;
+	InputPC,Saida_Dados_2,M2R,Dados_1,Dados_2;
 	wire Zero;
 	wire[4:0] WR,indice;
 	
@@ -16,7 +19,10 @@ module Processador(Clock,Reset,Type,Set,Swap,Switches,OutputData);
 	
 	// Variaveis Dispositivos
 	ProgramCounter PC(InputPC,Endereco,Clock,Reset,Halt);  											// Contador do Programa 
-	MemoriaInstrucoes MI(Endereco,Clock,Instrucao);		 												// Memória de Instruções
+	//MemoriaInstrucoes MI(Endereco,Clock,Instrucao);		 											// Memória de Instruções
+	
+	//MemoriaInstrucoes MI(32'B0,Endereco,32'B0, Clock,Instrucao);
+	
 	ADD_Offset AO(Endereco,32'B00000000000000000000000000000001,OutADD);							// ADD com Offset
 	MUX_Mem2Reg MM2R(Instrucao[20:16],Instrucao[15:11],RegDst,WR);									// MUX Memória de Instruções p/ Registradoress
 	Registradores Reg(Instrucao[25:21],Instrucao[20:16],
@@ -31,5 +37,14 @@ module Processador(Clock,Reset,Type,Set,Swap,Switches,OutputData);
 	UnidadedeControle UC(Instrucao[31:26],OpIO,OpALU,MemRead,MemWrite,RegWrite
 								,AluSrc,RegDst,Desvio,Mem2Reg,HaltIAS,TypeJR);
 	ModuloIO ModuloIO(Clock,Reset,Switches,Set,HaltIAS,OpIO,ImediatoExtendido,Dados_1,Halt,DataIO,OutputData); // Modulo I/O										 		 // Extensor de Sina																																			 // Interface de Comunicacao
-                                                              
+            
+
+	// Partes do SO
+	/*wire [31:0] HD_data, BIOS_Instruction, PC_HD, Page, Page_out;
+	wire HD_wr, BiosSign, SavePage;
+	wire [4:0] PID;
+	BIOS BS(Clock, Reset, HD_data[31:26], BIOS_Instruction, BiosSign, SavePage, PC_HD, Page, PID);
+	HDSimulado HD(Resultado, PC_HD, 0, Clock, HD_data);
+	Paginacao Pages(Clock, SavePage, PID, Page, Page_out);
+	*/
 endmodule
