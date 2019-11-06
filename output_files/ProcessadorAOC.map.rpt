@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ProcessadorAOC
-Tue Nov  5 20:03:20 2019
+Tue Nov  5 21:03:35 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -28,8 +28,8 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  20. Parameter Settings for User Entity Instance: BIOS:BIOSSystem|POST:PostFirware
  21. Parameter Settings for User Entity Instance: HDSimulado:HD
  22. Parameter Settings for Inferred Entity Instance: Processador:CPU|MemoriaDados:MD|altsyncram:Memoria_rtl_0
- 23. Parameter Settings for Inferred Entity Instance: Processador:CPU|ULA:ULA|lpm_mult:Mult0
- 24. Parameter Settings for Inferred Entity Instance: Processador:CPU|ULA:ULA|lpm_divide:Div0
+ 23. Parameter Settings for Inferred Entity Instance: Processador:CPU|ULA:ULA|lpm_divide:Div0
+ 24. Parameter Settings for Inferred Entity Instance: Processador:CPU|ULA:ULA|lpm_mult:Mult0
  25. altsyncram Parameter Settings by Entity Instance
  26. lpm_mult Parameter Settings by Entity Instance
  27. Port Connectivity Checks: "HDSimulado:HD"
@@ -65,15 +65,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov  5 20:03:20 2019       ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov  5 21:03:35 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ProcessadorAOC                              ;
 ; Top-level Entity Name              ; YouseiOS                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 4,495                                       ;
-;     Total combinational functions  ; 3,360                                       ;
-;     Dedicated logic registers      ; 1,270                                       ;
-; Total registers                    ; 1270                                        ;
+; Total logic elements               ; 4,371                                       ;
+;     Total combinational functions  ; 3,264                                       ;
+;     Dedicated logic registers      ; 1,222                                       ;
+; Total registers                    ; 1222                                        ;
 ; Total pins                         ; 260                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 4,096                                       ;
@@ -224,12 +224,6 @@ refer to the applicable agreement for further details.
 ; altram.inc                       ; yes             ; Megafunction                 ; /home/jimmy/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                 ; /home/jimmy/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
 ; db/altsyncram_ksd1.tdf           ; yes             ; Auto-Generated Megafunction  ; /home/jimmy/YouseiOS-master/db/altsyncram_ksd1.tdf                                    ;         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                 ; /home/jimmy/intelFPGA_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf          ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; /home/jimmy/intelFPGA_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.inc       ;         ;
-; multcore.inc                     ; yes             ; Megafunction                 ; /home/jimmy/intelFPGA_lite/18.1/quartus/libraries/megafunctions/multcore.inc          ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; /home/jimmy/intelFPGA_lite/18.1/quartus/libraries/megafunctions/bypassff.inc          ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; /home/jimmy/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altshift.inc          ;         ;
-; db/mult_7dt.tdf                  ; yes             ; Auto-Generated Megafunction  ; /home/jimmy/YouseiOS-master/db/mult_7dt.tdf                                           ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; /home/jimmy/intelFPGA_lite/18.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; /home/jimmy/intelFPGA_lite/18.1/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; /home/jimmy/intelFPGA_lite/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
@@ -238,6 +232,12 @@ refer to the applicable agreement for further details.
 ; db/alt_u_div_6af.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/jimmy/YouseiOS-master/db/alt_u_div_6af.tdf                                      ;         ;
 ; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/jimmy/YouseiOS-master/db/add_sub_7pc.tdf                                        ;         ;
 ; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/jimmy/YouseiOS-master/db/add_sub_8pc.tdf                                        ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; /home/jimmy/intelFPGA_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf          ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; /home/jimmy/intelFPGA_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.inc       ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; /home/jimmy/intelFPGA_lite/18.1/quartus/libraries/megafunctions/multcore.inc          ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; /home/jimmy/intelFPGA_lite/18.1/quartus/libraries/megafunctions/bypassff.inc          ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; /home/jimmy/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altshift.inc          ;         ;
+; db/mult_7dt.tdf                  ; yes             ; Auto-Generated Megafunction  ; /home/jimmy/YouseiOS-master/db/mult_7dt.tdf                                           ;         ;
 +----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+---------+
 
 
@@ -246,20 +246,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 4,495          ;
+; Estimated Total logic elements              ; 4,371          ;
 ;                                             ;                ;
-; Total combinational functions               ; 3360           ;
+; Total combinational functions               ; 3264           ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 2314           ;
-;     -- 3 input functions                    ; 851            ;
-;     -- <=2 input functions                  ; 195            ;
+;     -- 4 input functions                    ; 2216           ;
+;     -- 3 input functions                    ; 846            ;
+;     -- <=2 input functions                  ; 202            ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 2564           ;
-;     -- arithmetic mode                      ; 796            ;
+;     -- normal mode                          ; 2525           ;
+;     -- arithmetic mode                      ; 739            ;
 ;                                             ;                ;
-; Total registers                             ; 1270           ;
-;     -- Dedicated logic registers            ; 1270           ;
+; Total registers                             ; 1222           ;
+;     -- Dedicated logic registers            ; 1222           ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 260            ;
@@ -268,9 +268,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 6              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; Clock50M~input ;
-; Maximum fan-out                             ; 1302           ;
-; Total fan-out                               ; 16940          ;
-; Average fan-out                             ; 3.27           ;
+; Maximum fan-out                             ; 1254           ;
+; Total fan-out                               ; 16453          ;
+; Average fan-out                             ; 3.26           ;
 +---------------------------------------------+----------------+
 
 
@@ -279,35 +279,35 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                     ; Entity Name          ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
-; |YouseiOS                                    ; 3360 (0)            ; 1270 (0)                  ; 4096        ; 6            ; 0       ; 3         ; 260  ; 0            ; |YouseiOS                                                                                                                                               ; YouseiOS             ; work         ;
-;    |BIOS:BIOSSystem|                         ; 95 (76)             ; 95 (90)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|BIOS:BIOSSystem                                                                                                                               ; BIOS                 ; work         ;
-;       |POST:PostFirware|                     ; 19 (19)             ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|BIOS:BIOSSystem|POST:PostFirware                                                                                                              ; POST                 ; work         ;
-;    |HDSimulado:HD|                           ; 66 (66)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|HDSimulado:HD                                                                                                                                 ; HDSimulado           ; work         ;
-;    |MemoriaInstrucoes:MI|                    ; 16 (16)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|MemoriaInstrucoes:MI                                                                                                                          ; MemoriaInstrucoes    ; work         ;
-;    |MultiplexeMe:comb_5|                     ; 49 (49)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|MultiplexeMe:comb_5                                                                                                                           ; MultiplexeMe         ; work         ;
+; |YouseiOS                                    ; 3264 (0)            ; 1222 (0)                  ; 4096        ; 6            ; 0       ; 3         ; 260  ; 0            ; |YouseiOS                                                                                                                                               ; YouseiOS             ; work         ;
+;    |BIOS:BIOSSystem|                         ; 102 (73)            ; 75 (70)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|BIOS:BIOSSystem                                                                                                                               ; BIOS                 ; work         ;
+;       |POST:PostFirware|                     ; 29 (29)             ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|BIOS:BIOSSystem|POST:PostFirware                                                                                                              ; POST                 ; work         ;
+;    |HDSimulado:HD|                           ; 65 (65)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|HDSimulado:HD                                                                                                                                 ; HDSimulado           ; work         ;
+;    |MemoriaInstrucoes:MI|                    ; 1 (1)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|MemoriaInstrucoes:MI                                                                                                                          ; MemoriaInstrucoes    ; work         ;
+;    |MultiplexeMe:MuxBIOS|                    ; 27 (27)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|MultiplexeMe:MuxBIOS                                                                                                                          ; MultiplexeMe         ; work         ;
 ;    |Paginacao:Pages|                         ; 6 (6)               ; 36 (36)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Paginacao:Pages                                                                                                                               ; Paginacao            ; work         ;
-;    |ProccessControlBlock:BCP|                ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|ProccessControlBlock:BCP                                                                                                                      ; ProccessControlBlock ; work         ;
-;    |Processador:CPU|                         ; 3128 (0)            ; 1089 (0)                  ; 4096        ; 6            ; 0       ; 3         ; 0    ; 0            ; |YouseiOS|Processador:CPU                                                                                                                               ; Processador          ; work         ;
+;    |ProccessControlBlock:BCP|                ; 0 (0)               ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|ProccessControlBlock:BCP                                                                                                                      ; ProccessControlBlock ; work         ;
+;    |Processador:CPU|                         ; 3063 (0)            ; 1089 (0)                  ; 4096        ; 6            ; 0       ; 3         ; 0    ; 0            ; |YouseiOS|Processador:CPU                                                                                                                               ; Processador          ; work         ;
 ;       |ADD_Offset:AO|                        ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|ADD_Offset:AO                                                                                                                 ; ADD_Offset           ; work         ;
 ;       |MUX_Mem2Reg:MM2R|                     ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|MUX_Mem2Reg:MM2R                                                                                                              ; MUX_Mem2Reg          ; work         ;
 ;       |MUX_Reg2ALU:MR2A|                     ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|MUX_Reg2ALU:MR2A                                                                                                              ; MUX_Reg2ALU          ; work         ;
 ;       |MemoriaDados:MD|                      ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|MemoriaDados:MD                                                                                                               ; MemoriaDados         ; work         ;
 ;          |altsyncram:Memoria_rtl_0|          ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|MemoriaDados:MD|altsyncram:Memoria_rtl_0                                                                                      ; altsyncram           ; work         ;
 ;             |altsyncram_ksd1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|MemoriaDados:MD|altsyncram:Memoria_rtl_0|altsyncram_ksd1:auto_generated                                                       ; altsyncram_ksd1      ; work         ;
-;       |ModuloIO:ModuloIO|                    ; 2 (2)               ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|ModuloIO:ModuloIO                                                                                                             ; ModuloIO             ; work         ;
-;       |Mux_4:Mux_4|                          ; 266 (266)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|Mux_4:Mux_4                                                                                                                   ; Mux_4                ; work         ;
-;       |Mux_PCSrc:MPCS|                       ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|Mux_PCSrc:MPCS                                                                                                                ; Mux_PCSrc            ; work         ;
+;       |ModuloIO:ModuloIO|                    ; 3 (3)               ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|ModuloIO:ModuloIO                                                                                                             ; ModuloIO             ; work         ;
+;       |Mux_4:Mux_4|                          ; 240 (240)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|Mux_4:Mux_4                                                                                                                   ; Mux_4                ; work         ;
+;       |Mux_PCSrc:MPCS|                       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|Mux_PCSrc:MPCS                                                                                                                ; Mux_PCSrc            ; work         ;
 ;       |ProgramCounter:PC|                    ; 34 (34)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|ProgramCounter:PC                                                                                                             ; ProgramCounter       ; work         ;
 ;       |Registradores:Reg|                    ; 1328 (1328)         ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|Registradores:Reg                                                                                                             ; Registradores        ; work         ;
-;       |ULA:ULA|                              ; 1412 (296)          ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |YouseiOS|Processador:CPU|ULA:ULA                                                                                                                       ; ULA                  ; work         ;
-;          |lpm_divide:Div0|                   ; 1088 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|ULA:ULA|lpm_divide:Div0                                                                                                       ; lpm_divide           ; work         ;
-;             |lpm_divide_hkm:auto_generated|  ; 1088 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|ULA:ULA|lpm_divide:Div0|lpm_divide_hkm:auto_generated                                                                         ; lpm_divide_hkm       ; work         ;
-;                |sign_div_unsign_9nh:divider| ; 1088 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|ULA:ULA|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh  ; work         ;
-;                   |alt_u_div_6af:divider|    ; 1088 (1087)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|ULA:ULA|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; alt_u_div_6af        ; work         ;
+;       |ULA:ULA|                              ; 1371 (226)          ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |YouseiOS|Processador:CPU|ULA:ULA                                                                                                                       ; ULA                  ; work         ;
+;          |lpm_divide:Div0|                   ; 1117 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|ULA:ULA|lpm_divide:Div0                                                                                                       ; lpm_divide           ; work         ;
+;             |lpm_divide_hkm:auto_generated|  ; 1117 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|ULA:ULA|lpm_divide:Div0|lpm_divide_hkm:auto_generated                                                                         ; lpm_divide_hkm       ; work         ;
+;                |sign_div_unsign_9nh:divider| ; 1117 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|ULA:ULA|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh  ; work         ;
+;                   |alt_u_div_6af:divider|    ; 1117 (1116)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|ULA:ULA|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; alt_u_div_6af        ; work         ;
 ;                      |add_sub_8pc:add_sub_1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|ULA:ULA|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider|add_sub_8pc:add_sub_1 ; add_sub_8pc          ; work         ;
 ;          |lpm_mult:Mult0|                    ; 28 (0)              ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |YouseiOS|Processador:CPU|ULA:ULA|lpm_mult:Mult0                                                                                                        ; lpm_mult             ; work         ;
 ;             |mult_7dt:auto_generated|        ; 28 (28)             ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |YouseiOS|Processador:CPU|ULA:ULA|lpm_mult:Mult0|mult_7dt:auto_generated                                                                                ; mult_7dt             ; work         ;
-;       |UnidadedeControle:UC|                 ; 15 (15)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|UnidadedeControle:UC                                                                                                          ; UnidadedeControle    ; work         ;
+;       |UnidadedeControle:UC|                 ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|UnidadedeControle:UC                                                                                                          ; UnidadedeControle    ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -352,340 +352,341 @@ Encoding Type:  One-Hot
 +---------+---------+---------+---------+---------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                      ;
-+--------------------------------------------+--------------------------------------------+
-; Register name                              ; Reason for Removal                         ;
-+--------------------------------------------+--------------------------------------------+
-; BIOS:BIOSSystem|BIOS_Instr[6..11,13,15,31] ; Stuck at GND due to stuck port data_in     ;
-; BIOS:BIOSSystem|BIOS_Instr[4]              ; Merged with BIOS:BIOSSystem|BIOS_Instr[2]  ;
-; BIOS:BIOSSystem|BIOS_Instr[20]             ; Merged with BIOS:BIOSSystem|BIOS_Instr[18] ;
-; BIOS:BIOSSystem|BIOS_Instr[25]             ; Merged with BIOS:BIOSSystem|BIOS_Instr[23] ;
-; BIOS:BIOSSystem|state~4                    ; Lost fanout                                ;
-; BIOS:BIOSSystem|state~5                    ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~32                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~33                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~34                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~35                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~36                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~37                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~38                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~39                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~40                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~41                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~42                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~43                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~44                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~45                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~46                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~47                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~48                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~49                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~50                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~51                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~52                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~53                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~54                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~55                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~56                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~57                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~58                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~59                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~60                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~61                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~62                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~63                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~64                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~65                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~66                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~67                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~68                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~69                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~70                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~71                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~72                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~73                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~74                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~75                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~76                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~77                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~78                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~79                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~80                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~81                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~82                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~83                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~84                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~85                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~86                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~87                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~88                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~89                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~90                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~91                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~92                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~93                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~94                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~95                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~96                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~97                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~98                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~99                 ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~100                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~101                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~102                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~103                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~104                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~105                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~106                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~107                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~108                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~109                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~110                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~111                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~112                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~113                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~114                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~115                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~116                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~117                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~118                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~119                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~120                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~121                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~122                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~123                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~124                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~125                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~126                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~127                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~128                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~129                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~130                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~131                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~132                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~133                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~134                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~135                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~136                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~137                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~138                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~139                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~140                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~141                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~142                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~143                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~144                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~145                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~146                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~147                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~148                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~149                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~150                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~151                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~152                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~153                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~154                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~155                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~156                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~157                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~158                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~159                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~160                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~161                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~162                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~163                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~164                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~165                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~166                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~167                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~168                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~169                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~170                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~171                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~172                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~173                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~174                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~175                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~176                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~177                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~178                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~179                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~180                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~181                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~182                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~183                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~184                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~185                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~186                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~187                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~188                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~189                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~190                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~191                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~192                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~193                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~194                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~195                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~196                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~197                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~198                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~199                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~200                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~201                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~202                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~203                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~204                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~205                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~206                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~207                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~208                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~209                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~210                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~211                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~212                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~213                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~214                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~215                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~216                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~217                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~218                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~219                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~220                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~221                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~222                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~223                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~224                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~225                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~226                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~227                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~228                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~229                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~230                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~231                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~232                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~233                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~234                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~235                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~236                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~237                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~238                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~239                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~240                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~241                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~242                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~243                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~244                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~245                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~246                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~247                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~248                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~249                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~250                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~251                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~252                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~253                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~254                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~255                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~256                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~257                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~258                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~259                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~260                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~261                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~262                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~263                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~264                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~265                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~266                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~267                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~268                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~269                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~270                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~271                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~272                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~273                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~274                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~275                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~276                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~277                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~278                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~279                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~280                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~281                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~282                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~283                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~284                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~285                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~286                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~287                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~288                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~289                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~290                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~291                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~292                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~293                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~294                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~295                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~296                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~297                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~298                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~299                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~300                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~301                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~302                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~303                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~304                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~305                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~306                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~307                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~308                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~309                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~310                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~311                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~312                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~313                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~314                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~315                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~316                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~317                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~318                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~319                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~320                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~321                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~322                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~323                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~324                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~325                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~326                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~327                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~328                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~329                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~330                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~331                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~332                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~333                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~334                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~335                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~336                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~337                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~338                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~339                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~340                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~341                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~342                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~343                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~344                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~345                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~346                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~347                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~348                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~349                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~350                ; Lost fanout                                ;
-; Paginacao:Pages|Paginas~351                ; Lost fanout                                ;
-; Paginacao:Pages|PID_Add[4]                 ; Lost fanout                                ;
-; Total Number of Removed Registers = 335    ;                                            ;
-+--------------------------------------------+--------------------------------------------+
++----------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                 ;
++-----------------------------------------+----------------------------------------------------------+
+; Register name                           ; Reason for Removal                                       ;
++-----------------------------------------+----------------------------------------------------------+
+; MemoriaInstrucoes:MI|addr_reg[0]        ; Merged with BIOS:BIOSSystem|POST:PostFirware|addr_reg[0] ;
+; MemoriaInstrucoes:MI|addr_reg[1]        ; Merged with BIOS:BIOSSystem|POST:PostFirware|addr_reg[1] ;
+; MemoriaInstrucoes:MI|addr_reg[2]        ; Merged with BIOS:BIOSSystem|POST:PostFirware|addr_reg[2] ;
+; MemoriaInstrucoes:MI|addr_reg[3]        ; Merged with BIOS:BIOSSystem|POST:PostFirware|addr_reg[3] ;
+; MemoriaInstrucoes:MI|addr_reg[4]        ; Merged with BIOS:BIOSSystem|POST:PostFirware|addr_reg[4] ;
+; BIOS:BIOSSystem|state~4                 ; Lost fanout                                              ;
+; BIOS:BIOSSystem|state~5                 ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~32              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~33              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~34              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~35              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~36              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~37              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~38              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~39              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~40              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~41              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~42              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~43              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~44              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~45              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~46              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~47              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~48              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~49              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~50              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~51              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~52              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~53              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~54              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~55              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~56              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~57              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~58              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~59              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~60              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~61              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~62              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~63              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~64              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~65              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~66              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~67              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~68              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~69              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~70              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~71              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~72              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~73              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~74              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~75              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~76              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~77              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~78              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~79              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~80              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~81              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~82              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~83              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~84              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~85              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~86              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~87              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~88              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~89              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~90              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~91              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~92              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~93              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~94              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~95              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~96              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~97              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~98              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~99              ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~100             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~101             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~102             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~103             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~104             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~105             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~106             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~107             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~108             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~109             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~110             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~111             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~112             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~113             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~114             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~115             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~116             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~117             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~118             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~119             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~120             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~121             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~122             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~123             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~124             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~125             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~126             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~127             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~128             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~129             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~130             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~131             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~132             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~133             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~134             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~135             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~136             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~137             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~138             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~139             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~140             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~141             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~142             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~143             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~144             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~145             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~146             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~147             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~148             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~149             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~150             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~151             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~152             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~153             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~154             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~155             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~156             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~157             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~158             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~159             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~160             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~161             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~162             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~163             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~164             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~165             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~166             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~167             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~168             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~169             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~170             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~171             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~172             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~173             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~174             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~175             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~176             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~177             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~178             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~179             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~180             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~181             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~182             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~183             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~184             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~185             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~186             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~187             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~188             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~189             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~190             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~191             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~192             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~193             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~194             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~195             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~196             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~197             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~198             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~199             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~200             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~201             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~202             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~203             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~204             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~205             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~206             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~207             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~208             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~209             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~210             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~211             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~212             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~213             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~214             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~215             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~216             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~217             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~218             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~219             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~220             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~221             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~222             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~223             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~224             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~225             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~226             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~227             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~228             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~229             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~230             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~231             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~232             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~233             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~234             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~235             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~236             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~237             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~238             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~239             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~240             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~241             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~242             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~243             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~244             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~245             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~246             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~247             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~248             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~249             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~250             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~251             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~252             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~253             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~254             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~255             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~256             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~257             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~258             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~259             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~260             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~261             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~262             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~263             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~264             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~265             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~266             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~267             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~268             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~269             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~270             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~271             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~272             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~273             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~274             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~275             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~276             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~277             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~278             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~279             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~280             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~281             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~282             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~283             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~284             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~285             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~286             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~287             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~288             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~289             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~290             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~291             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~292             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~293             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~294             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~295             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~296             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~297             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~298             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~299             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~300             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~301             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~302             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~303             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~304             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~305             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~306             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~307             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~308             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~309             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~310             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~311             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~312             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~313             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~314             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~315             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~316             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~317             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~318             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~319             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~320             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~321             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~322             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~323             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~324             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~325             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~326             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~327             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~328             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~329             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~330             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~331             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~332             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~333             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~334             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~335             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~336             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~337             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~338             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~339             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~340             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~341             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~342             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~343             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~344             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~345             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~346             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~347             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~348             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~349             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~350             ; Lost fanout                                              ;
+; Paginacao:Pages|Paginas~351             ; Lost fanout                                              ;
+; Paginacao:Pages|PID_Add[4]              ; Lost fanout                                              ;
+; Total Number of Removed Registers = 328 ;                                                          ;
++-----------------------------------------+----------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -693,7 +694,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1270  ;
+; Total registers                              ; 1222  ;
 ; Number of registers using Synchronous Clear  ; 64    ;
 ; Number of registers using Synchronous Load   ; 32    ;
 ; Number of registers using Asynchronous Clear ; 4     ;
@@ -708,7 +709,7 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; BIOS:BIOSSystem|BiosSign               ; 61      ;
+; BIOS:BIOSSystem|BiosSign               ; 34      ;
 ; Total number of inverted registers = 1 ;         ;
 +----------------------------------------+---------+
 
@@ -727,14 +728,13 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |YouseiOS|BIOS:BIOSSystem|BIOS_Instr[12]                 ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |YouseiOS|BIOS:BIOSSystem|PC_HD[20]                      ;
-; 5:1                ; 24 bits   ; 72 LEs        ; 48 LEs               ; 24 LEs                 ; Yes        ; |YouseiOS|Processador:CPU|ProgramCounter:PC|Endereco[22] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |YouseiOS|Processador:CPU|ProgramCounter:PC|Endereco[12] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |YouseiOS|BIOS:BIOSSystem|BIOS_Instr                     ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |YouseiOS|Processador:CPU|Mux_4:Mux_4|M2R[3]             ;
-; 145:1              ; 6 bits    ; 576 LEs       ; 60 LEs               ; 516 LEs                ; No         ; |YouseiOS|Processador:CPU|ULA:ULA|Mux25                  ;
-; 148:1              ; 25 bits   ; 2450 LEs      ; 250 LEs              ; 2200 LEs               ; No         ; |YouseiOS|Processador:CPU|Mux_4:Mux_4|M2R[13]            ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |YouseiOS|BIOS:BIOSSystem|PC_HD[15]                      ;
+; 5:1                ; 24 bits   ; 72 LEs        ; 48 LEs               ; 24 LEs                 ; Yes        ; |YouseiOS|Processador:CPU|ProgramCounter:PC|Endereco[16] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |YouseiOS|Processador:CPU|ProgramCounter:PC|Endereco[2]  ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; No         ; |YouseiOS|BIOS:BIOSSystem|BIOS_Instr[29]                 ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |YouseiOS|Processador:CPU|Mux_4:Mux_4|M2R[1]             ;
+; 81:1               ; 6 bits    ; 324 LEs       ; 48 LEs               ; 276 LEs                ; No         ; |YouseiOS|Processador:CPU|ULA:ULA|Mux25                  ;
+; 84:1               ; 25 bits   ; 1400 LEs      ; 225 LEs              ; 1175 LEs               ; No         ; |YouseiOS|Processador:CPU|Mux_4:Mux_4|M2R[15]            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
 
 
@@ -870,6 +870,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Processador:CPU|ULA:ULA|lpm_divide:Div0 ;
++------------------------+----------------+------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                           ;
++------------------------+----------------+------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                        ;
+; LPM_WIDTHD             ; 32             ; Untyped                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
+; CBXI_PARAMETER         ; lpm_divide_hkm ; Untyped                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
++------------------------+----------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: Processador:CPU|ULA:ULA|lpm_mult:Mult0 ;
 +------------------------------------------------+--------------+-------------------------+
@@ -902,29 +925,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                 ;
 ; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                 ;
 +------------------------------------------------+--------------+-------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: Processador:CPU|ULA:ULA|lpm_divide:Div0 ;
-+------------------------+----------------+------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                           ;
-+------------------------+----------------+------------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                        ;
-; LPM_WIDTHD             ; 32             ; Untyped                                        ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
-; LPM_PIPELINE           ; 0              ; Untyped                                        ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                        ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
-; CBXI_PARAMETER         ; lpm_divide_hkm ; Untyped                                        ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
-+------------------------+----------------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1026,28 +1026,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 260                         ;
-; cycloneiii_ff         ; 1270                        ;
+; cycloneiii_ff         ; 1222                        ;
 ;     CLR               ; 4                           ;
 ;     ENA               ; 1123                        ;
 ;     ENA SCLR          ; 32                          ;
 ;     ENA SCLR SLD      ; 32                          ;
-;     plain             ; 79                          ;
-; cycloneiii_lcell_comb ; 3362                        ;
-;     arith             ; 796                         ;
-;         2 data inputs ; 119                         ;
-;         3 data inputs ; 677                         ;
-;     normal            ; 2566                        ;
+;     plain             ; 31                          ;
+; cycloneiii_lcell_comb ; 3267                        ;
+;     arith             ; 739                         ;
+;         2 data inputs ; 63                          ;
+;         3 data inputs ; 676                         ;
+;     normal            ; 2528                        ;
 ;         0 data inputs ; 31                          ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 43                          ;
-;         3 data inputs ; 174                         ;
-;         4 data inputs ; 2314                        ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 106                         ;
+;         3 data inputs ; 170                         ;
+;         4 data inputs ; 2216                        ;
 ; cycloneiii_mac_mult   ; 3                           ;
 ; cycloneiii_mac_out    ; 3                           ;
 ; cycloneiii_ram_block  ; 32                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 137.50                      ;
-; Average LUT depth     ; 92.77                       ;
+; Max LUT depth         ; 139.50                      ;
+; Average LUT depth     ; 97.06                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1066,7 +1066,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Nov  5 20:03:03 2019
+    Info: Processing started: Tue Nov  5 21:03:18 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProcessadorAOC -c ProcessadorAOC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1129,7 +1129,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file Multipl
     Info (12023): Found entity 1: MultiplexeMe File: /home/jimmy/YouseiOS-master/MultiplexeMe.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ProccessControlBlock.v
     Info (12023): Found entity 1: ProccessControlBlock File: /home/jimmy/YouseiOS-master/ProccessControlBlock.v Line: 1
-Critical Warning (10846): Verilog HDL Instantiation warning at YouseiOS.v(22): instance has no name File: /home/jimmy/YouseiOS-master/YouseiOS.v Line: 22
 Info (12127): Elaborating entity "YouseiOS" for the top level hierarchy
 Info (12128): Elaborating entity "MemoriaInstrucoes" for hierarchy "MemoriaInstrucoes:MI" File: /home/jimmy/YouseiOS-master/YouseiOS.v Line: 17
 Warning (12125): Using design file Processador.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
@@ -1150,22 +1149,22 @@ Info (12128): Elaborating entity "Mux_4" for hierarchy "Processador:CPU|Mux_4:Mu
 Info (12128): Elaborating entity "UnidadedeControle" for hierarchy "Processador:CPU|UnidadedeControle:UC" File: /home/jimmy/YouseiOS-master/Processador.v Line: 38
 Info (12128): Elaborating entity "ModuloIO" for hierarchy "Processador:CPU|ModuloIO:ModuloIO" File: /home/jimmy/YouseiOS-master/Processador.v Line: 39
 Info (12128): Elaborating entity "ProccessControlBlock" for hierarchy "ProccessControlBlock:BCP" File: /home/jimmy/YouseiOS-master/YouseiOS.v Line: 21
-Info (12128): Elaborating entity "MultiplexeMe" for hierarchy "MultiplexeMe:comb_5" File: /home/jimmy/YouseiOS-master/YouseiOS.v Line: 22
-Info (12128): Elaborating entity "BIOS" for hierarchy "BIOS:BIOSSystem" File: /home/jimmy/YouseiOS-master/YouseiOS.v Line: 23
+Info (12128): Elaborating entity "MultiplexeMe" for hierarchy "MultiplexeMe:MuxBIOS" File: /home/jimmy/YouseiOS-master/YouseiOS.v Line: 23
+Info (12128): Elaborating entity "BIOS" for hierarchy "BIOS:BIOSSystem" File: /home/jimmy/YouseiOS-master/YouseiOS.v Line: 24
 Info (12128): Elaborating entity "POST" for hierarchy "BIOS:BIOSSystem|POST:PostFirware" File: /home/jimmy/YouseiOS-master/BIOS.v Line: 27
 Warning (10030): Net "ram.data_a" at POST.v(14) has no driver or initial value, using a default initial value '0' File: /home/jimmy/YouseiOS-master/POST.v Line: 14
 Warning (10030): Net "ram.waddr_a" at POST.v(14) has no driver or initial value, using a default initial value '0' File: /home/jimmy/YouseiOS-master/POST.v Line: 14
 Warning (10030): Net "ram.we_a" at POST.v(14) has no driver or initial value, using a default initial value '0' File: /home/jimmy/YouseiOS-master/POST.v Line: 14
-Info (12128): Elaborating entity "HDSimulado" for hierarchy "HDSimulado:HD" File: /home/jimmy/YouseiOS-master/YouseiOS.v Line: 25
-Info (12128): Elaborating entity "Paginacao" for hierarchy "Paginacao:Pages" File: /home/jimmy/YouseiOS-master/YouseiOS.v Line: 26
+Info (12128): Elaborating entity "HDSimulado" for hierarchy "HDSimulado:HD" File: /home/jimmy/YouseiOS-master/YouseiOS.v Line: 26
+Info (12128): Elaborating entity "Paginacao" for hierarchy "Paginacao:Pages" File: /home/jimmy/YouseiOS-master/YouseiOS.v Line: 27
 Warning (276027): Inferred dual-clock RAM node "Processador:CPU|MemoriaDados:MD|Memoria_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Info (276014): Found 3 instances of uninferred RAM logic
     Info (276007): RAM logic "Paginacao:Pages|Paginas" is uninferred due to asynchronous read logic File: /home/jimmy/YouseiOS-master/Paginacao.v Line: 9
     Info (276004): RAM logic "ProccessControlBlock:BCP|Contexto_PC" is uninferred due to inappropriate RAM size File: /home/jimmy/YouseiOS-master/ProccessControlBlock.v Line: 8
     Info (276007): RAM logic "Processador:CPU|Registradores:Reg|Registros" is uninferred due to asynchronous read logic File: /home/jimmy/YouseiOS-master/Registradores.v Line: 8
 Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/jimmy/YouseiOS-master/db/ProcessadorAOC.ram0_HDSimulado_ff99326.hdl.mif" contains "don't care" values -- overwriting them with 0s
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/jimmy/YouseiOS-master/db/ProcessadorAOC.ram0_MemoriaInstrucoes_a9e79ff2.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/jimmy/YouseiOS-master/db/ProcessadorAOC.ram0_POST_29f19b.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "/home/jimmy/YouseiOS-master/db/ProcessadorAOC.ram0_MemoriaInstrucoes_a9e79ff2.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "Processador:CPU|MemoriaDados:MD|Memoria_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -1183,8 +1182,8 @@ Info (19000): Inferred 1 megafunctions from design logic
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
 Info (278001): Inferred 2 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Processador:CPU|ULA:ULA|Mult0" File: /home/jimmy/YouseiOS-master/ULA.v Line: 17
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Processador:CPU|ULA:ULA|Div0" File: /home/jimmy/YouseiOS-master/ULA.v Line: 18
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Processador:CPU|ULA:ULA|Mult0" File: /home/jimmy/YouseiOS-master/ULA.v Line: 17
 Info (12130): Elaborated megafunction instantiation "Processador:CPU|MemoriaDados:MD|altsyncram:Memoria_rtl_0"
 Info (12133): Instantiated megafunction "Processador:CPU|MemoriaDados:MD|altsyncram:Memoria_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -1203,19 +1202,6 @@ Info (12133): Instantiated megafunction "Processador:CPU|MemoriaDados:MD|altsync
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ksd1.tdf
     Info (12023): Found entity 1: altsyncram_ksd1 File: /home/jimmy/YouseiOS-master/db/altsyncram_ksd1.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "Processador:CPU|ULA:ULA|lpm_mult:Mult0" File: /home/jimmy/YouseiOS-master/ULA.v Line: 17
-Info (12133): Instantiated megafunction "Processador:CPU|ULA:ULA|lpm_mult:Mult0" with the following parameter: File: /home/jimmy/YouseiOS-master/ULA.v Line: 17
-    Info (12134): Parameter "LPM_WIDTHA" = "32"
-    Info (12134): Parameter "LPM_WIDTHB" = "32"
-    Info (12134): Parameter "LPM_WIDTHP" = "64"
-    Info (12134): Parameter "LPM_WIDTHR" = "64"
-    Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mult_7dt.tdf
-    Info (12023): Found entity 1: mult_7dt File: /home/jimmy/YouseiOS-master/db/mult_7dt.tdf Line: 30
 Info (12130): Elaborated megafunction instantiation "Processador:CPU|ULA:ULA|lpm_divide:Div0" File: /home/jimmy/YouseiOS-master/ULA.v Line: 18
 Info (12133): Instantiated megafunction "Processador:CPU|ULA:ULA|lpm_divide:Div0" with the following parameter: File: /home/jimmy/YouseiOS-master/ULA.v Line: 18
     Info (12134): Parameter "LPM_WIDTHN" = "32"
@@ -1232,6 +1218,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
     Info (12023): Found entity 1: add_sub_7pc File: /home/jimmy/YouseiOS-master/db/add_sub_7pc.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
     Info (12023): Found entity 1: add_sub_8pc File: /home/jimmy/YouseiOS-master/db/add_sub_8pc.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "Processador:CPU|ULA:ULA|lpm_mult:Mult0" File: /home/jimmy/YouseiOS-master/ULA.v Line: 17
+Info (12133): Instantiated megafunction "Processador:CPU|ULA:ULA|lpm_mult:Mult0" with the following parameter: File: /home/jimmy/YouseiOS-master/ULA.v Line: 17
+    Info (12134): Parameter "LPM_WIDTHA" = "32"
+    Info (12134): Parameter "LPM_WIDTHB" = "32"
+    Info (12134): Parameter "LPM_WIDTHP" = "64"
+    Info (12134): Parameter "LPM_WIDTHR" = "64"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_7dt.tdf
+    Info (12023): Found entity 1: mult_7dt File: /home/jimmy/YouseiOS-master/db/mult_7dt.tdf Line: 30
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following DSP element node(s):
         Warning (14320): Synthesized away node "Processador:CPU|ULA:ULA|lpm_mult:Mult0|mult_7dt:auto_generated|mac_mult7" File: /home/jimmy/YouseiOS-master/db/mult_7dt.tdf Line: 66
@@ -1270,15 +1269,15 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 323 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4858 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4734 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 258 output pins
-    Info (21061): Implemented 4560 logic cells
+    Info (21061): Implemented 4436 logic cells
     Info (21064): Implemented 32 RAM segments
     Info (21062): Implemented 6 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 44 warnings
-    Info: Peak virtual memory: 1075 megabytes
-    Info: Processing ended: Tue Nov  5 20:03:20 2019
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 43 warnings
+    Info: Peak virtual memory: 1073 megabytes
+    Info: Processing ended: Tue Nov  5 21:03:35 2019
     Info: Elapsed time: 00:00:17
     Info: Total CPU time (on all processors): 00:00:32
 

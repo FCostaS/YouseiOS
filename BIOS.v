@@ -27,6 +27,35 @@ module BIOS
 	POST PostFirware(.addr(PC_PID),.clk(clk),.q(POST_Instr));
 				 
 	// Output depends only on the state
+	always @(*)
+	begin
+	
+		case (state)
+			A:
+			begin
+				BIOS_Instr <= 32'B00010100000000000000000000000000; /* JUMP to 0 */
+			end
+			B:
+			begin
+				BIOS_Instr <= 32'B00010100000000000000000000000000; /* JUMP to 0 */
+			end
+			C:
+			begin
+				BIOS_Instr <= 32'B00010100000000000000000000000000; /* JUMP to 0 */
+			end
+			D:
+			begin
+				if(POST_Instr[31:26] == HALT || ~BiosSign)
+				begin
+					BIOS_Instr <= 32'B00010100000000000000000000000000; /* JUMP to 0 */
+				end
+					else
+						BIOS_Instr <= POST_Instr;
+			end
+		endcase
+	
+	end
+	
 	always @ (posedge clk)
 	begin
 	case (state)
@@ -34,30 +63,26 @@ module BIOS
 			begin
 				BiosSign <= 1'b1; /* Indico que a BIOS esta ativa */
 				PC_HD <= 32'b0; /* Contador de Programa da BIOS fixado em -1 */
-				BIOS_Instr <= 32'B00010100000000000000000000000000; /* JUMP to 0 */
 			end
 			B:
 			begin
 				BiosSign <= 1'b1; /* BIOS ativada */
 				PC_HD <= PC_HD + 32'b1; /* Incremento PC do HD */
-				BIOS_Instr <= 32'B00010100000000000000000000000000; /* JUMP to 0 */
 			end
 			C:
 			begin
 				BiosSign <= 1'b1; /* BIOS ativada */
 				PC_HD <= PC_HD + 32'b1;  /* Incremento PC do HD */
-				BIOS_Instr <= 32'B00010100000000000000000000000000; /* JUMP to 0 */
 			end
 			D:
 			begin
+				PC_HD <= PC_HD;
 				if(POST_Instr[31:26] == HALT || ~BiosSign)
 				begin
 					BiosSign <= 1'b0; /* BIOS eh desativada */
-					BIOS_Instr <= 32'B00010100000000000000000000000000; /* JUMP to 0 */
 				end
-					else
-						BIOS_Instr <= POST_Instr;
 			end
+
 		endcase
 	end
 	

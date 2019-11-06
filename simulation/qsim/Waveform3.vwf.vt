@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/05/2019 19:58:44"
+// Generated on "11/05/2019 21:01:06"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          YouseiOS
 // 
@@ -38,7 +38,7 @@ wire [31:0] HD_data;
 wire [31:0] Indice_HD;
 wire [31:0] Instrucao;
 wire [31:0] Output;
-wire [31:0] PC_PID;
+wire [31:0] PC_CPU;
 wire [31:0] Page;
 wire [31:0] Page_out;
 wire SavePage;
@@ -53,7 +53,7 @@ YouseiOS i1 (
 	.Indice_HD(Indice_HD),
 	.Instrucao(Instrucao),
 	.\Output (Output),
-	.PC_PID(PC_PID),
+	.PC_CPU(PC_CPU),
 	.Page(Page),
 	.Page_out(Page_out),
 	.Reset(Reset),
@@ -74,8 +74,8 @@ end
 always
 begin
 	Clock50M = 1'b0;
-	Clock50M = #5000 1'b1;
-	#5000;
+	Clock50M = #1000 1'b1;
+	#1000;
 end 
 endmodule
 

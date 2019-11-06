@@ -1,14 +1,14 @@
-Fitter Status : Successful - Tue Nov  5 20:05:37 2019
+Fitter Status : Successful - Tue Nov  5 21:00:35 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : ProcessadorAOC
 Top-level Entity Name : YouseiOS
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 3,785 / 114,480 ( 3 % )
-    Total combinational functions : 3,360 / 114,480 ( 3 % )
-    Dedicated logic registers : 1,270 / 114,480 ( 1 % )
-Total registers : 1270
+Total logic elements : 3,637 / 114,480 ( 3 % )
+    Total combinational functions : 3,264 / 114,480 ( 3 % )
+    Dedicated logic registers : 1,213 / 114,480 ( 1 % )
+Total registers : 1213
 Total pins : 260 / 529 ( 49 % )
 Total virtual pins : 0
 Total memory bits : 4,096 / 3,981,312 ( < 1 % )
