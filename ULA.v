@@ -102,36 +102,31 @@ module ULA(Dados_1,Dados_2,Opcode,funct,OpALU,Zero,Resultado); // Dados com 32 b
 				
 			6'B001101: // diff (13)
 			begin
-				Resultado = 32'B0;
-				Resultado[0] = (Dados_1 != Dados_2);  			// Set less than ()
+				Resultado = {31'B0, (Dados_1 != Dados_2)};  			// Set less than ()
 				Zero = 1'B0;
 			end
 			
 			6'B001111: // sbt (15)
 			begin
-				Resultado = 32'B0;
-				Resultado[0] = (Dados_1 > Dados_2);  			// Set less than ()
+				Resultado = {31'B0, (Dados_1 > Dados_2)};  			// Set less than ()
 				Zero = 1'B0;
 			end
 			
 			6'B010000: // equal (SET) (16)
 			begin
-				Resultado = 32'B0;
-				Resultado[0] = (Dados_1 == Dados_2);  			// Set less than ()
+				Resultado = {31'B0, (Dados_1 == Dados_2)};  			// Set less than ()
 				Zero = 1'B0;
 			end
 			
 			6'B010001: // sbte (17)
 			begin
-				Resultado = 32'B0;
-				Resultado[0] = (Dados_1 >= Dados_2);  			// Set less than ()
+				Resultado = {31'B0, (Dados_1 >= Dados_2)};  			// Set less than ()
 				Zero = 1'B0;
 			end
 			
 			6'B010010: // slte (18)
 			begin
-				Resultado = 32'B0;
-				Resultado[0] = (Dados_1 <= Dados_2);  			// Set less than ()
+				Resultado = {31'B0, (Dados_1 <= Dados_2)};  			// Set less than ()
 				Zero = 1'B0;
 			end
 			
@@ -144,6 +139,18 @@ module ULA(Dados_1,Dados_2,Opcode,funct,OpALU,Zero,Resultado); // Dados com 32 b
 			6'B010100: // SUBI
 			begin
 				Resultado = Dados_1 - Dados_2;    			// Adição Imediato (SUBI)
+				Zero = 1'B0;
+			end
+			
+			6'B011110: // Write
+			begin
+				Resultado = Dados_1 + Dados_2;
+				Zero = 1'B0;
+			end
+			
+			6'B011111: // Read
+			begin
+				Resultado = Dados_1 + Dados_2;
 				Zero = 1'B0;
 			end
 				

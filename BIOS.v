@@ -15,10 +15,10 @@ module BIOS
 	// Declare states
 	parameter A = 0, B = 1, C = 2, D = 3;
 	parameter BEGIN_FILE = 6'B010101,
-				 END_FILE = 6'B010110,
-				 HD_HEAD = 6'B010111,
-				 HD_END = 6'B011000,
-				 HALT = 6'B011001;
+				 END_FILE   = 6'B010110,
+				 HD_HEAD    = 6'B010111,
+				 HD_END     = 6'B011000,
+				 HALT       = 6'B011001;
 	initial 
 	begin : INIT
 		BiosSign <= 1'b1; /* Indico que a BIOS esta ativa */

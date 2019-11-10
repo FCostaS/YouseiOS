@@ -7,7 +7,7 @@ module ProccessControlBlock(
 	
 	reg [31:0] Contexto_PC [10:0];
 	
-	always@(posedge clk)
+	always@(negedge clk)
 	begin
 		Contexto_PC[PID] <= PC_in;
 	end

@@ -1,9 +1,10 @@
 //module Processador(Clock,Reset,Type,Set,Swap,Switches,OutputData);
-module Processador(Clock, Reset, Switches, OutputData, Endereco, Instrucao);
+module Processador(Clock, Reset, Switches, OutputData, Endereco, Instrucao, WriteHD);
 	
 	input Clock,Reset;
 	input [12:0] Switches;
 	output [31:0] OutputData, Endereco;
+	output WriteHD;
 	input [31:0] Instrucao;
 	
 	wire[31:0] Resultado,ImediatoExtendido,Offset,DataIO,ReadData,ResultadoSoma,OutADD,
@@ -33,9 +34,9 @@ module Processador(Clock, Reset, Switches, OutputData, Endereco, Instrucao);
 	ULA ULA(Dados_1,Saida_Dados_2,Instrucao[31:26],Instrucao[5:0],OpALU,Zero,Resultado);	// Unidade Lógica e Aritmética
 	MemoriaDados MD(Resultado,Dados_2,MemRead,MemWrite,ReadData,Clock);
 	Mux_PCSrc MPCS(Zero,Desvio,ResultadoSoma,OutADD,InputPC);										// MUX para PCSrc
-	Mux_4 Mux_4(ReadData,DataIO,Resultado,Mem2Reg,M2R);												// MUX Memory/ModuloIO/ULAResult																												//
+	Mux_4 Mux_4(ReadData,DataIO,Resultado,Resultado+1,Mem2Reg,M2R);												// MUX Memory/ModuloIO/ULAResult																												//
 	UnidadedeControle UC(Instrucao[31:26],OpIO,OpALU,MemRead,MemWrite,RegWrite
-								,AluSrc,RegDst,Desvio,Mem2Reg,HaltIAS,TypeJR);
+								,AluSrc,RegDst,Desvio,Mem2Reg,HaltIAS,TypeJR,WriteHD);
 	ModuloIO ModuloIO(Clock,Reset,Switches,Set,HaltIAS,OpIO,ImediatoExtendido,Dados_1,Halt,DataIO,OutputData); // Modulo I/O										 		 // Extensor de Sina																																			 // Interface de Comunicacao
             
 

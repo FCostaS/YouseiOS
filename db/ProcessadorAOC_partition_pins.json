@@ -28,6 +28,26 @@
 					"strict" : false
 				},
 				{
+					"name" : "HD_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "HD_data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "HD_data[8]",
+					"strict" : false
+				},
+				{
+					"name" : "HD_data[9]",
+					"strict" : false
+				},
+				{
+					"name" : "HD_data[10]",
+					"strict" : false
+				},
+				{
 					"name" : "HD_data[11]",
 					"strict" : false
 				},
@@ -36,7 +56,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "HD_data[13]",
+					"strict" : false
+				},
+				{
 					"name" : "HD_data[14]",
+					"strict" : false
+				},
+				{
+					"name" : "HD_data[15]",
 					"strict" : false
 				},
 				{
@@ -97,6 +125,10 @@
 				},
 				{
 					"name" : "HD_data[30]",
+					"strict" : false
+				},
+				{
+					"name" : "HD_data[31]",
 					"strict" : false
 				},
 				{
@@ -580,7 +612,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "SavePage",
+					"name" : "Page_Update",
 					"strict" : false
 				},
 				{
@@ -929,6 +961,10 @@
 				},
 				{
 					"name" : "PC_CPU[31]",
+					"strict" : false
+				},
+				{
+					"name" : "WriteHD",
 					"strict" : false
 				},
 				{
