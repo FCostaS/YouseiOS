@@ -1,25 +1,25 @@
 # do ProcessadorAOC.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:01:14 on Nov 15,2019
+# Start time: 17:17:56 on Nov 16,2019
 # vlog -work work ProcessadorAOC.vo 
 # -- Compiling module YouseiOS
 # 
 # Top level modules:
 # 	YouseiOS
-# End time: 23:01:15 on Nov 15,2019, Elapsed time: 0:00:01
+# End time: 17:17:57 on Nov 16,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:01:15 on Nov 15,2019
+# Start time: 17:17:57 on Nov 16,2019
 # vlog -work work Waveform4.vwf.vt 
 # -- Compiling module YouseiOS_vlg_vec_tst
 # 
 # Top level modules:
 # 	YouseiOS_vlg_vec_tst
-# End time: 23:01:15 on Nov 15,2019, Elapsed time: 0:00:00
+# End time: 17:17:57 on Nov 16,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.YouseiOS_vlg_vec_tst 
-# Start time: 23:01:15 on Nov 15,2019
+# Start time: 17:17:57 on Nov 16,2019
 # Loading work.YouseiOS_vlg_vec_tst
 # Loading work.YouseiOS
 # Loading cycloneive_ver.cycloneive_io_obuf
@@ -35,7 +35,7 @@
 # Loading cycloneive_ver.cycloneive_mac_mult_internal
 # Loading cycloneive_ver.cycloneive_mac_out
 # Loading altera_ver.PRIM_GDFF_LOW
-# ** Warning: Design size of 16542 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 16772 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#25
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
@@ -47,50 +47,44 @@
 # Simulation time: 0 ps
 # Simulation time: 0 ps
 # Simulation time: 0 ps
-# Simulation time: 251001 ps
-# Simulation time: 251001 ps
-# Simulation time: 251001 ps
-# Simulation time: 251001 ps
-# Simulation time: 251001 ps
-# Simulation time: 251001 ps
-# Simulation time: 251001 ps
-# Simulation time: 251001 ps
-# Simulation time: 391000 ps
-# Simulation time: 391000 ps
-# Simulation time: 391000 ps
-# Simulation time: 391000 ps
-# Simulation time: 391000 ps
-# Simulation time: 391000 ps
-# Simulation time: 391000 ps
-# Simulation time: 391000 ps
-# Simulation time: 527001 ps
-# Simulation time: 527001 ps
-# Simulation time: 527001 ps
-# Simulation time: 527001 ps
-# Simulation time: 527001 ps
-# Simulation time: 527001 ps
-# Simulation time: 527001 ps
-# Simulation time: 527001 ps
-# Simulation time: 671001 ps
-# Simulation time: 671001 ps
-# Simulation time: 671001 ps
-# Simulation time: 671001 ps
-# Simulation time: 671001 ps
-# Simulation time: 671001 ps
-# Simulation time: 671001 ps
-# Simulation time: 671001 ps
-# Simulation time: 807001 ps
-# Simulation time: 807001 ps
-# Simulation time: 807001 ps
-# Simulation time: 807001 ps
-# Simulation time: 807001 ps
-# Simulation time: 807001 ps
-# Simulation time: 807001 ps
-# Simulation time: 807001 ps
-# Simulation time: 955001 ps
-# Simulation time: 955001 ps
-# Simulation time: 955001 ps
-# ** Note: $finish    : Waveform4.vwf.vt(68)
+# Simulation time: 245002 ps
+# Simulation time: 245002 ps
+# Simulation time: 245002 ps
+# Simulation time: 245002 ps
+# Simulation time: 245002 ps
+# Simulation time: 245002 ps
+# Simulation time: 245002 ps
+# Simulation time: 245002 ps
+# Simulation time: 399000 ps
+# Simulation time: 399000 ps
+# Simulation time: 399000 ps
+# Simulation time: 399000 ps
+# Simulation time: 399000 ps
+# Simulation time: 399000 ps
+# Simulation time: 399000 ps
+# Simulation time: 399000 ps
+# Simulation time: 575000 ps
+# Simulation time: 575000 ps
+# Simulation time: 575000 ps
+# Simulation time: 575000 ps
+# Simulation time: 575000 ps
+# Simulation time: 575000 ps
+# Simulation time: 575000 ps
+# Simulation time: 575000 ps
+# Simulation time: 737001 ps
+# Simulation time: 737001 ps
+# Simulation time: 737001 ps
+# Simulation time: 737001 ps
+# Simulation time: 737001 ps
+# Simulation time: 737001 ps
+# Simulation time: 737001 ps
+# Simulation time: 737001 ps
+# Simulation time: 899001 ps
+# Simulation time: 899001 ps
+# Simulation time: 899001 ps
+# Simulation time: 899001 ps
+# Simulation time: 899001 ps
+# ** Note: $finish    : Waveform4.vwf.vt(72)
 #    Time: 1 us  Iteration: 0  Instance: /YouseiOS_vlg_vec_tst
-# End time: 23:03:24 on Nov 15,2019, Elapsed time: 0:02:09
+# End time: 17:19:53 on Nov 16,2019, Elapsed time: 0:01:56
 # Errors: 0, Warnings: 2

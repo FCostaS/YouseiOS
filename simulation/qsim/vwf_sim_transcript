@@ -9,10 +9,10 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ProcessadorAOC -c ProcessadorAOC --vector_source="/home/jimmy/YouseiOS/Waveform4.vwf" --testbench_file="/home/jimmy/YouseiOS/simulation/qsim/Waveform4.vwf.vt"
 
-Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition    Info: Copyright (C) 2018  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details.    Info: Processing started: Fri Nov 15 23:01:11 2019Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ProcessadorAOC -c ProcessadorAOC --vector_source=/home/jimmy/YouseiOS/Waveform4.vwf --testbench_file=/home/jimmy/YouseiOS/simulation/qsim/Waveform4.vwf.vtInfo (119006): Selected device EP4CE115F29C7 for design "ProcessadorAOC"Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition    Info: Copyright (C) 2018  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details.    Info: Processing started: Sat Nov 16 17:17:53 2019Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ProcessadorAOC -c ProcessadorAOC --vector_source=/home/jimmy/YouseiOS/Waveform4.vwf --testbench_file=/home/jimmy/YouseiOS/simulation/qsim/Waveform4.vwf.vtInfo (119006): Selected device EP4CE115F29C7 for design "ProcessadorAOC"Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 005): Ignoring output pin "Output[9]" in vector source file when writing test bench files
-5): Ignoring output pin "Page[8]" in vector source file when writing test bench files
 le when writing test bench files
+iOS/simulation/qsim/Waveform4.vwf.vt for simulationInfo: Quartus Prime EDA Netlist Writer was successful. 0 errors, 334 warnings    Info: Peak virtual memory: 1060 megabytes    Info: Processing ended: Sat Nov 16 17:17:54 2019    Info: Elapsed time: 00:00:01    Info: Total CPU time (on all processors): 00:00:01
 Completed successfully. 
 
 Completed successfully. 
@@ -21,7 +21,7 @@ Completed successfully.
 
 quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="/home/jimmy/YouseiOS/simulation/qsim/" ProcessadorAOC -c ProcessadorAOC
 
-Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition    Info: Copyright (C) 2018  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details.    Info: Processing started: Fri Nov 15 23:01:12 2019Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=/home/jimmy/YouseiOS/simulation/qsim/ ProcessadorAOC -c ProcessadorAOCInfo (119006): Selected device EP4CE115F29C7 for design "ProcessadorAOC"Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.Info (204019): Generated file ProcessadorAOC.vo in folder "/home/jimmy/YouseiOS/simulation/qsim//" for EDA simulation toolInfo: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning    Info: Peak virtual memory: 1076 megabytes    Info: Processing ended: Fri Nov 15 23:01:14 2019    Info: Elapsed time: 00:00:02    Info: Total CPU time (on all processors): 00:00:01
+Info: *******************************************************************Info: Running Quartus Prime EDA Netlist Writer    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition    Info: Copyright (C) 2018  Intel Corporation. All rights reserved.    Info: Your use of Intel Corporation's design tools, logic functions     Info: and other software and tools, and its AMPP partner logic     Info: functions, and any output files from any of the foregoing     Info: (including device programming or simulation files), and any     Info: associated documentation or information are expressly subject     Info: to the terms and conditions of the Intel Program License     Info: Subscription Agreement, the Intel Quartus Prime License Agreement,    Info: the Intel FPGA IP License Agreement, or other applicable license    Info: agreement, including, without limitation, that your use is for    Info: the sole purpose of programming logic devices manufactured by    Info: Intel and sold by Intel or its authorized distributors.  Please    Info: refer to the applicable agreement for further details.    Info: Processing started: Sat Nov 16 17:17:54 2019Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=/home/jimmy/YouseiOS/simulation/qsim/ ProcessadorAOC -c ProcessadorAOCInfo (119006): Selected device EP4CE115F29C7 for design "ProcessadorAOC"Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.Info (204019): Generated file ProcessadorAOC.vo in folder "/home/jimmy/YouseiOS/simulation/qsim//" for EDA simulation toolInfo: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning    Info: Peak virtual memory: 1074 megabytes    Info: Processing ended: Sat Nov 16 17:17:56 2019    Info: Elapsed time: 00:00:02    Info: Total CPU time (on all processors): 00:00:01
 Completed successfully. 
 
 **** Generating the ModelSim .do script ****
@@ -39,18 +39,18 @@ Reading pref.tcl
 # do ProcessadorAOC.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:01:14 on Nov 15,2019# vlog -work work ProcessadorAOC.vo 
+# Start time: 17:17:56 on Nov 16,2019# vlog -work work ProcessadorAOC.vo 
 # -- Compiling module YouseiOS
 # 
-# Top level modules:# 	YouseiOS# End time: 23:01:15 on Nov 15,2019, Elapsed time: 0:00:01# Errors: 0, Warnings: 0
+# Top level modules:# 	YouseiOS# End time: 17:17:57 on Nov 16,2019, Elapsed time: 0:00:01# Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:01:15 on Nov 15,2019# vlog -work work Waveform4.vwf.vt 
+# Start time: 17:17:57 on Nov 16,2019# vlog -work work Waveform4.vwf.vt 
 # -- Compiling module YouseiOS_vlg_vec_tst
 # 
 # Top level modules:# 	YouseiOS_vlg_vec_tst
-# End time: 23:01:15 on Nov 15,2019, Elapsed time: 0:00:00
+# End time: 17:17:57 on Nov 16,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.YouseiOS_vlg_vec_tst # Start time: 23:01:15 on Nov 15,2019# Loading work.YouseiOS_vlg_vec_tst# Loading work.YouseiOS# Loading cycloneive_ver.cycloneive_io_obuf# Loading cycloneive_ver.cycloneive_io_ibuf# Loading cycloneive_ver.cycloneive_lcell_comb# Loading altera_ver.dffeas# Loading cycloneive_ver.cycloneive_ram_block# Loading cycloneive_ver.cycloneive_ram_register# Loading cycloneive_ver.cycloneive_ram_pulse_generator# Loading cycloneive_ver.cycloneive_mac_mult# Loading cycloneive_ver.cycloneive_mac_data_reg# Loading cycloneive_ver.cycloneive_mac_sign_reg# Loading cycloneive_ver.cycloneive_mac_mult_internal# Loading cycloneive_ver.cycloneive_mac_out# Loading altera_ver.PRIM_GDFF_LOW# ** Warning: Design size of 16542 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.# Expect performance to be adversely affected.
+# vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.YouseiOS_vlg_vec_tst # Start time: 17:17:57 on Nov 16,2019# Loading work.YouseiOS_vlg_vec_tst# Loading work.YouseiOS# Loading cycloneive_ver.cycloneive_io_obuf# Loading cycloneive_ver.cycloneive_io_ibuf# Loading cycloneive_ver.cycloneive_lcell_comb# Loading altera_ver.dffeas# Loading cycloneive_ver.cycloneive_ram_block# Loading cycloneive_ver.cycloneive_ram_register# Loading cycloneive_ver.cycloneive_ram_pulse_generator# Loading cycloneive_ver.cycloneive_mac_mult# Loading cycloneive_ver.cycloneive_mac_data_reg# Loading cycloneive_ver.cycloneive_mac_sign_reg# Loading cycloneive_ver.cycloneive_mac_mult_internal# Loading cycloneive_ver.cycloneive_mac_out# Loading altera_ver.PRIM_GDFF_LOW# ** Warning: Design size of 16772 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.# Expect performance to be adversely affected.
 # after#25
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
 # Simulation time: 0 ps
@@ -61,51 +61,45 @@ Reading pref.tcl
 # Simulation time: 0 ps
 # Simulation time: 0 ps
 # Simulation time: 0 ps
-# Simulation time: 251001 ps
-# Simulation time: 251001 ps
-# Simulation time: 251001 ps
-# Simulation time: 251001 ps
-# Simulation time: 251001 ps
-# Simulation time: 251001 ps
-# Simulation time: 251001 ps
-# Simulation time: 251001 ps
-# Simulation time: 391000 ps
-# Simulation time: 391000 ps
-# Simulation time: 391000 ps
-# Simulation time: 391000 ps
-# Simulation time: 391000 ps
-# Simulation time: 391000 ps
-# Simulation time: 391000 ps
-# Simulation time: 391000 ps
-# Simulation time: 527001 ps
-# Simulation time: 527001 ps
-# Simulation time: 527001 ps
-# Simulation time: 527001 ps
-# Simulation time: 527001 ps
-# Simulation time: 527001 ps
-# Simulation time: 527001 ps
-# Simulation time: 527001 ps
-# Simulation time: 671001 ps
-# Simulation time: 671001 ps
-# Simulation time: 671001 ps
-# Simulation time: 671001 ps
-# Simulation time: 671001 ps
-# Simulation time: 671001 ps
-# Simulation time: 671001 ps
-# Simulation time: 671001 ps
-# Simulation time: 807001 ps
-# Simulation time: 807001 ps
-# Simulation time: 807001 ps
-# Simulation time: 807001 ps
-# Simulation time: 807001 ps
-# Simulation time: 807001 ps
-# Simulation time: 807001 ps
-# Simulation time: 807001 ps
-# Simulation time: 955001 ps
-# Simulation time: 955001 ps
-# Simulation time: 955001 ps
-# ** Note: $finish    : Waveform4.vwf.vt(68)#    Time: 1 us  Iteration: 0  Instance: /YouseiOS_vlg_vec_tst
-# End time: 23:03:24 on Nov 15,2019, Elapsed time: 0:02:09# Errors: 0, Warnings: 2
+# Simulation time: 245002 ps
+# Simulation time: 245002 ps
+# Simulation time: 245002 ps
+# Simulation time: 245002 ps
+# Simulation time: 245002 ps
+# Simulation time: 245002 ps
+# Simulation time: 245002 ps
+# Simulation time: 245002 ps
+# Simulation time: 399000 ps
+# Simulation time: 399000 ps
+# Simulation time: 399000 ps
+# Simulation time: 399000 ps
+# Simulation time: 399000 ps
+# Simulation time: 399000 ps
+# Simulation time: 399000 ps
+# Simulation time: 399000 ps
+# Simulation time: 575000 ps
+# Simulation time: 575000 ps
+# Simulation time: 575000 ps
+# Simulation time: 575000 ps
+# Simulation time: 575000 ps
+# Simulation time: 575000 ps
+# Simulation time: 575000 ps
+# Simulation time: 575000 ps
+# Simulation time: 737001 ps
+# Simulation time: 737001 ps
+# Simulation time: 737001 ps
+# Simulation time: 737001 ps
+# Simulation time: 737001 ps
+# Simulation time: 737001 ps
+# Simulation time: 737001 ps
+# Simulation time: 737001 ps
+# Simulation time: 899001 ps
+# Simulation time: 899001 ps
+# Simulation time: 899001 ps
+# Simulation time: 899001 ps
+# Simulation time: 899001 ps
+# ** Note: $finish    : Waveform4.vwf.vt(72)#    Time: 1 us  Iteration: 0  Instance: /YouseiOS_vlg_vec_tst
+# End time: 17:19:53 on Nov 16,2019, Elapsed time: 0:01:56# Errors: 0, Warnings: 2
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
@@ -116,7 +110,7 @@ Reading /home/jimmy/YouseiOS/simulation/qsim/ProcessadorAOC.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to /home/jimmy/YouseiOS/simulation/qsim/ProcessadorAOC_20191115230324.sim.vwf
+Writing the resulting VWF to /home/jimmy/YouseiOS/simulation/qsim/ProcessadorAOC_20191116171953.sim.vwf
 
 Finished VCD to VWF conversion.
 

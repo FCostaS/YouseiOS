@@ -1132,6 +1132,46 @@
 					"strict" : false
 				},
 				{
+					"name" : "LocalData[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LocalData[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LocalData[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LocalData[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LocalData[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LocalData[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LocalData[7]",
+					"strict" : false
+				},
+				{
+					"name" : "LocalData[8]",
+					"strict" : false
+				},
+				{
+					"name" : "LocalData[9]",
+					"strict" : false
+				},
+				{
+					"name" : "LocalData[10]",
+					"strict" : false
+				},
+				{
 					"name" : "Clock50M",
 					"strict" : false
 				},
