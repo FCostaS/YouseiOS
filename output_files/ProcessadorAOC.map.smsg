@@ -1,1 +1,0 @@
-Warning (10268): Verilog HDL information at BIOS.v(53): always construct contains both blocking and non-blocking assignments File: /home/jimmy/YouseiOS-master/BIOS.v Line: 53
