@@ -95,7 +95,7 @@ module VARIAVEIS_AMBIENTE(
 	end
 	
 	// Escolha entre modo Kernel e modo usuario
-	always @(SO_Kernel or Opcode)
+	always @(SO_Kernel or Opcode or PID)
 	begin
 	
 		/*if(SO_Kernel)

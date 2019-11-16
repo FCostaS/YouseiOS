@@ -25,7 +25,7 @@ module YouseiOS(Clock50M,Reset,HD_data, BIOS_Instruction, Indice_HD, Page, Page_
 	MultiplexeMe MuxBIOS(.BiosSign(BiosSign), .BiosInstruction(BIOS_Instruction),
 								.MP_Instruction(MP_Instruction), .Instrucao(Instrucao) );
 	
-	BIOS BIOSSystem(.clk(Clock), .reset(Reset), .Opcode(HD_data[31:26]), .Opcode_CPU(Instrucao[31:26]), .PC_PID(PC_PID), .PC_HD(Indice_HD),
+	BIOS BIOSSystem(.clk(Clock), .reset(Reset), .Opcode(HD_data[31:26]), .Opcode_CPU(Instrucao[31:26]), .PC_PID(PC_CPU), .PC_HD(Indice_HD),
 						 .BIOS_Instr(BIOS_Instruction), .BiosSign(BiosSign), .SavePage(SavePage), .Page(Page) );
 	
 	HDSimulado HD(PC_PID, Indice_HD, WriteHD, Clock, HD_data);

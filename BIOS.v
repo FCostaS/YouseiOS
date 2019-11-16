@@ -40,12 +40,28 @@ module BIOS
 
 			B:
 			begin
-				BIOS_Instr <= {6'B011111, 5'B00100, 5'B00100, 16'B0000000000000000}; /* ReadHD $t3,0($t3)  */
+				//BIOS_Instr <= {6'B011111, 5'B00100, 5'B00100, 16'B0000000000000000}; /* ReadHD $t3,0($t3)  */
+				if(Opcode != HD_END)
+				begin
+					BIOS_Instr <= {6'B011111, 5'B00100, 5'B00100, 16'B0000000000000000}; /* ReadHD $t3,0($t3)  */
+				end
+				else
+				begin
+					BIOS_Instr <= 32'B00010100000000000000000000000000; /* JUMP to 0 */
+				end
 			end
 			
 			C:
 			begin
-				BIOS_Instr <= {6'B011111, 5'B00100, 5'B00100, 16'B0000000000000000}; /* ReadHD $t3,0($t3)  */
+				//BIOS_Instr <= {6'B011111, 5'B00100, 5'B00100, 16'B0000000000000000}; /* ReadHD $t3,0($t3)  */
+				if(Opcode != HD_END)
+				begin
+					BIOS_Instr <= {6'B011111, 5'B00100, 5'B00100, 16'B0000000000000000}; /* ReadHD $t3,0($t3)  */
+				end
+				else
+				begin
+					BIOS_Instr <= 32'B00010100000000000000000000000000; /* JUMP to 0 */
+				end
 			end
 			
 			D:
