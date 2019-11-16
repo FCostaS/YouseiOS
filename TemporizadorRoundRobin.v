@@ -1,5 +1,5 @@
 module TemporizadorRoundRobin(
-	input clk, reset, Atv_Temp,
+	input clk, reset, Atv_Temp, Block,
 	output reg SO_Kernel
 );
 
@@ -11,6 +11,8 @@ module TemporizadorRoundRobin(
 	
 		if(~state)
 			Count <= 0;
+		else if(Block)
+			Count <= Count; // Bloqueio contador
 		else
 			Count <= Count + 6'B000001;
 	

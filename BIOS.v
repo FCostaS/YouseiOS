@@ -1,11 +1,11 @@
 module BIOS
 (
 	input	clk, reset,
-	input [5:0] Opcode,
-	input [31:0] PC_PID,
+	input [5:0] Opcode, Opcode_CPU,
+	input [31:0] PC_PID, PC_HD,
 	output reg [31:0] BIOS_Instr,
 	output reg BiosSign, SavePage,
-	output reg [31:0] PC_HD, Page
+	output reg [31:0] Page
 );
 
 	// Declare state register
@@ -18,7 +18,9 @@ module BIOS
 				 END_FILE   = 6'B010110,
 				 HD_HEAD    = 6'B010111,
 				 HD_END     = 6'B011000,
-				 HALT       = 6'B011001;
+				 HALT       = 6'B011001,
+				 CREATE_FILE= 6'B011101,
+				 CLOSE_FILE = 6'B100000; 
 	initial 
 	begin : INIT
 		BiosSign <= 1'b1; /* Indico que a BIOS esta ativa */
@@ -35,22 +37,27 @@ module BIOS
 			begin
 				BIOS_Instr <= 32'B00010100000000000000000000000000; /* JUMP to 0 */
 			end
+
 			B:
 			begin
-				BIOS_Instr <= 32'B00010100000000000000000000000000; /* JUMP to 0 */
+				BIOS_Instr <= {6'B011111, 5'B00100, 5'B00100, 16'B0000000000000000}; /* ReadHD $t3,0($t3)  */
 			end
+			
 			C:
 			begin
-				BIOS_Instr <= 32'B00010100000000000000000000000000; /* JUMP to 0 */
+				BIOS_Instr <= {6'B011111, 5'B00100, 5'B00100, 16'B0000000000000000}; /* ReadHD $t3,0($t3)  */
 			end
+			
 			D:
 			begin
 				if(POST_Instr[31:26] == HALT || ~BiosSign)
 				begin
 					BIOS_Instr <= 32'B00010100000000000000000000000000; /* JUMP to 0 */
 				end
-					else
-						BIOS_Instr <= POST_Instr;
+				else
+				begin
+					BIOS_Instr <= POST_Instr;
+				end
 			end
 		endcase
 	
@@ -59,49 +66,54 @@ module BIOS
 	always @ (posedge clk)
 	begin
 	case (state)
-			A:
-			begin
-				BiosSign <= 1'b1; /* Indico que a BIOS esta ativa */
-				PC_HD <= 32'b0; /* Contador de Programa da BIOS fixado em -1 */
-			end
-			B:
-			begin
-				BiosSign <= 1'b1; /* BIOS ativada */
-				PC_HD <= PC_HD + 32'b1; /* Incremento PC do HD */
-			end
-			C:
-			begin
-				BiosSign <= 1'b1; /* BIOS ativada */
-				PC_HD <= PC_HD + 32'b1;  /* Incremento PC do HD */
-			end
+	
 			D:
 			begin
-				PC_HD <= PC_HD;
 				if(POST_Instr[31:26] == HALT || ~BiosSign)
 				begin
-					BiosSign <= 1'b0; /* BIOS eh desativada */
+					BiosSign <= 1'b0; // BIOS eh desativada
 				end
+			end
+			
+			default:
+			begin
+				BiosSign <= 1'b1; // BIOS ativada
 			end
 
 		endcase
 	end
 	
+	// Page Generator
 	always @(posedge clk)
 	begin
 	
-		if(BiosSign == 1 && Opcode == BEGIN_FILE) // BEGIN_FILE
+		if(BiosSign == 1'B1)
 		begin
-			Page[31:16] <= PC_HD[15:0];
-			SavePage <= 1'b0;
-		end
-		else if(BiosSign == 1 && Opcode == END_FILE) // END_FILE
-		begin
-			Page[15:0] <= PC_HD[15:0];
-			SavePage <= 1'b1;
+			if( Opcode == BEGIN_FILE ) // BEGIN_FILE
+			begin
+				Page[31:16] <= PC_HD[15:0];
+				SavePage <= 1'B0;
+			end
+			else if( Opcode == END_FILE ) // END_FILE
+			begin
+				Page[15:0] <= PC_HD[15:0];
+				SavePage <= 1'B1;
+			end
+			else
+				SavePage <= 1'B0;
 		end
 		else
 		begin
-			SavePage <= 1'b0;
+			if( Opcode_CPU == CREATE_FILE ) // BEGIN_FILE
+			begin
+				Page[31:16] <= PC_HD[15:0];
+				SavePage <= 1'B0;
+			end
+			else if( Opcode_CPU == CLOSE_FILE ) // END_FILE
+			begin
+				Page[15:0] <= PC_HD[15:0];
+				SavePage <= 1'B1;
+			end
 		end
 	
 	end
@@ -113,7 +125,7 @@ module BIOS
 		else
 			case (state)
 				A:
-					if(Opcode == HD_HEAD)
+					if(Opcode == BEGIN_FILE)
 						state <= B;
 					else
 						state <= A;

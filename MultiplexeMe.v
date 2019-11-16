@@ -7,7 +7,7 @@ module MultiplexeMe(
 	always@(*)
 	begin
 	
-		if(BiosSign == 1'd1)
+		if(BiosSign == 1'B1)
 		begin
 			Instrucao <= BiosInstruction;
 		end

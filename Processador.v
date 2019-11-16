@@ -1,14 +1,14 @@
 //module Processador(Clock,Reset,Type,Set,Swap,Switches,OutputData);
-module Processador(Clock, Reset, Switches, OutputData, Endereco, Instrucao, WriteHD);
+module Processador(Clock, Reset, Switches, OutputData, InputPC, Endereco, Instrucao, WriteHD,Resultado);
 	
 	input Clock,Reset;
 	input [12:0] Switches;
-	output [31:0] OutputData, Endereco;
+	output [31:0] OutputData, InputPC, Resultado;
 	output WriteHD;
-	input [31:0] Instrucao;
+	input [31:0] Instrucao, Endereco;
 	
-	wire[31:0] Resultado,ImediatoExtendido,Offset,DataIO,ReadData,ResultadoSoma,OutADD,
-	InputPC,Saida_Dados_2,M2R,Dados_1,Dados_2;
+	wire[31:0] ImediatoExtendido,Offset,DataIO,ReadData,ResultadoSoma,OutADD,
+	Saida_Dados_2,M2R,Dados_1,Dados_2;
 	wire Zero;
 	wire[4:0] WR,indice;
 	
@@ -19,7 +19,7 @@ module Processador(Clock, Reset, Switches, OutputData, Endereco, Instrucao, Writ
 	wire MemRead,MemWrite,AluSrc,RegDst,Desvio;
 	
 	// Variaveis Dispositivos
-	ProgramCounter PC(InputPC,Endereco,Clock,Reset,Halt);  											// Contador do Programa 
+	//ProgramCounter PC(InputPC,Endereco,Clock,Reset,Halt);  											// Contador do Programa 
 	//MemoriaInstrucoes MI(Endereco,Clock,Instrucao);		 											// Memória de Instruções
 	
 	//MemoriaInstrucoes MI(32'B0,Endereco,32'B0, Clock,Instrucao);
@@ -34,7 +34,7 @@ module Processador(Clock, Reset, Switches, OutputData, Endereco, Instrucao, Writ
 	ULA ULA(Dados_1,Saida_Dados_2,Instrucao[31:26],Instrucao[5:0],OpALU,Zero,Resultado);	// Unidade Lógica e Aritmética
 	MemoriaDados MD(Resultado,Dados_2,MemRead,MemWrite,ReadData,Clock);
 	Mux_PCSrc MPCS(Zero,Desvio,ResultadoSoma,OutADD,InputPC);										// MUX para PCSrc
-	Mux_4 Mux_4(ReadData,DataIO,Resultado,Resultado+1,Mem2Reg,M2R);												// MUX Memory/ModuloIO/ULAResult																												//
+	Mux_4 Mux_4(ReadData,DataIO,Resultado,Resultado+32'B00000000000000000000000000000001,Mem2Reg,M2R);												// MUX Memory/ModuloIO/ULAResult																												//
 	UnidadedeControle UC(Instrucao[31:26],OpIO,OpALU,MemRead,MemWrite,RegWrite
 								,AluSrc,RegDst,Desvio,Mem2Reg,HaltIAS,TypeJR,WriteHD);
 	ModuloIO ModuloIO(Clock,Reset,Switches,Set,HaltIAS,OpIO,ImediatoExtendido,Dados_1,Halt,DataIO,OutputData); // Modulo I/O										 		 // Extensor de Sina																																			 // Interface de Comunicacao

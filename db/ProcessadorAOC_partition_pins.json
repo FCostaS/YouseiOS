@@ -768,11 +768,43 @@
 					"strict" : false
 				},
 				{
+					"name" : "Instrucao[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Instrucao[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Instrucao[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Instrucao[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Instrucao[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Instrucao[11]",
+					"strict" : false
+				},
+				{
 					"name" : "Instrucao[12]",
 					"strict" : false
 				},
 				{
+					"name" : "Instrucao[13]",
+					"strict" : false
+				},
+				{
 					"name" : "Instrucao[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Instrucao[15]",
 					"strict" : false
 				},
 				{
@@ -833,6 +865,10 @@
 				},
 				{
 					"name" : "Instrucao[30]",
+					"strict" : false
+				},
+				{
+					"name" : "Instrucao[31]",
 					"strict" : false
 				},
 				{
@@ -965,6 +1001,134 @@
 				},
 				{
 					"name" : "WriteHD",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[0]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[1]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[2]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[3]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[4]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[5]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[6]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[7]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[8]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[9]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[10]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[11]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[12]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[13]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[14]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[15]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[16]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[17]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[18]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[19]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[20]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[21]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[22]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[23]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[24]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[25]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[26]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[27]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[28]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[29]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[30]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalAddress[31]",
 					"strict" : false
 				},
 				{

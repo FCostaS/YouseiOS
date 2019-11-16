@@ -451,11 +451,11 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			begin
 			OpIO 		= 1'B0;
 			RegDst 	= 1'B0;
-			RegWrite = 1'B0;
+			RegWrite = 1'B1;
 			AluSrc 	= 1'B1;
 			Mem2Reg 	= 2'B11;
 			MemRead 	= 1'B0;
-			MemWrite = 1'B1;
+			MemWrite = 1'B0;
 			Desvio 	= 1'B0;
 			OpALU 	= 6'B000000;
 			TypeJR   = 1'B0;
@@ -470,6 +470,36 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			AluSrc 	= 1'B1;
 			Mem2Reg 	= 2'B11;
 			MemRead 	= 1'B1;
+			MemWrite = 1'B0;
+			Desvio 	= 1'B0;
+			OpALU 	= 6'B000000;
+			TypeJR   = 1'B0;
+			WriteHD  = 1'B0;
+			end
+			
+			6'B100000: // CLOSE_FILE
+			begin
+			OpIO 		= 1'B0;
+			RegDst 	= 1'B0;
+			RegWrite = 1'B0;
+			AluSrc 	= 1'B0;
+			Mem2Reg 	= 2'B10;
+			MemRead 	= 1'B0;
+			MemWrite = 1'B0;
+			Desvio 	= 1'B0;
+			OpALU 	= 6'B000000;
+			TypeJR   = 1'B0;
+			WriteHD  = 1'B0;
+			end
+			
+			6'B100001: // KERNEL_SWAP
+			begin
+			OpIO 		= 1'B0;
+			RegDst 	= 1'B0;
+			RegWrite = 1'B0;
+			AluSrc 	= 1'B0;
+			Mem2Reg 	= 2'B10;
+			MemRead 	= 1'B0;
 			MemWrite = 1'B0;
 			Desvio 	= 1'B0;
 			OpALU 	= 6'B000000;

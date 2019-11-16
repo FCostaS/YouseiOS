@@ -12,6 +12,6 @@ module ProccessControlBlock(
 		Contexto_PC[PID] <= PC_in;
 	end
 	
-	assign PC_out = Contexto_PC[PID];
+	assign PC_out = Contexto_PC[PID] ;
 	
 endmodule
