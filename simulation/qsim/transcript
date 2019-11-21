@@ -1,34 +1,29 @@
 # do ProcessadorAOC.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:21:33 on Nov 16,2019
+# Start time: 02:21:21 on Nov 17,2019
 # vlog -work work ProcessadorAOC.vo 
 # -- Compiling module YouseiOS
-# -- Compiling module hard_block
 # 
 # Top level modules:
 # 	YouseiOS
-# End time: 18:21:34 on Nov 16,2019, Elapsed time: 0:00:01
+# End time: 02:21:22 on Nov 17,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:21:34 on Nov 16,2019
+# Start time: 02:21:22 on Nov 17,2019
 # vlog -work work Waveform4.vwf.vt 
 # -- Compiling module YouseiOS_vlg_vec_tst
 # 
 # Top level modules:
 # 	YouseiOS_vlg_vec_tst
-# End time: 18:21:34 on Nov 16,2019, Elapsed time: 0:00:00
+# End time: 02:21:22 on Nov 17,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.YouseiOS_vlg_vec_tst 
-# Start time: 18:21:34 on Nov 16,2019
+# Start time: 02:21:22 on Nov 17,2019
 # Loading work.YouseiOS_vlg_vec_tst
 # Loading work.YouseiOS
-# Loading work.hard_block
 # Loading cycloneive_ver.cycloneive_io_obuf
 # Loading cycloneive_ver.cycloneive_io_ibuf
-# Loading cycloneive_ver.cycloneive_clkctrl
-# Loading cycloneive_ver.cycloneive_mux41
-# Loading cycloneive_ver.cycloneive_ena_reg
 # Loading cycloneive_ver.cycloneive_lcell_comb
 # Loading altera_ver.dffeas
 # Loading cycloneive_ver.cycloneive_ram_block
@@ -40,9 +35,9 @@
 # Loading cycloneive_ver.cycloneive_mac_mult_internal
 # Loading cycloneive_ver.cycloneive_mac_out
 # Loading altera_ver.PRIM_GDFF_LOW
-# ** Warning: Design size of 12797 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 16772 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
-# after#26
+# after#25
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
 # Simulation time: 0 ps
 # Simulation time: 0 ps
@@ -52,26 +47,101 @@
 # Simulation time: 0 ps
 # Simulation time: 0 ps
 # Simulation time: 0 ps
-# Simulation time: 401000 ps
-# Simulation time: 401000 ps
-# Simulation time: 401000 ps
-# Simulation time: 401000 ps
-# Simulation time: 401000 ps
-# Simulation time: 401000 ps
-# Simulation time: 401000 ps
-# Simulation time: 401000 ps
-# Simulation time: 679001 ps
-# Simulation time: 679001 ps
-# Simulation time: 679001 ps
-# Simulation time: 679001 ps
-# Simulation time: 679001 ps
-# Simulation time: 679001 ps
-# Simulation time: 679001 ps
-# Simulation time: 679001 ps
-# Simulation time: 923001 ps
-# Simulation time: 923001 ps
-# Simulation time: 923001 ps
+# Simulation time: 151501 ps
+# Simulation time: 151501 ps
+# Simulation time: 151501 ps
+# Simulation time: 151501 ps
+# Simulation time: 151501 ps
+# Simulation time: 151501 ps
+# Simulation time: 151501 ps
+# Simulation time: 151501 ps
+# Simulation time: 228501 ps
+# Simulation time: 228501 ps
+# Simulation time: 228501 ps
+# Simulation time: 228501 ps
+# Simulation time: 228501 ps
+# Simulation time: 228501 ps
+# Simulation time: 228501 ps
+# Simulation time: 228501 ps
+# Simulation time: 309000 ps
+# Simulation time: 309000 ps
+# Simulation time: 309000 ps
+# Simulation time: 309000 ps
+# Simulation time: 309000 ps
+# Simulation time: 309000 ps
+# Simulation time: 309000 ps
+# Simulation time: 309000 ps
+# Simulation time: 390501 ps
+# Simulation time: 390501 ps
+# Simulation time: 390501 ps
+# Simulation time: 390501 ps
+# Simulation time: 390501 ps
+# Simulation time: 390501 ps
+# Simulation time: 390501 ps
+# Simulation time: 390501 ps
+# Simulation time: 467501 ps
+# Simulation time: 467501 ps
+# Simulation time: 467501 ps
+# Simulation time: 467501 ps
+# Simulation time: 467501 ps
+# Simulation time: 467501 ps
+# Simulation time: 467501 ps
+# Simulation time: 467501 ps
+# Simulation time: 539501 ps
+# Simulation time: 539501 ps
+# Simulation time: 539501 ps
+# Simulation time: 539501 ps
+# Simulation time: 539501 ps
+# Simulation time: 539501 ps
+# Simulation time: 539501 ps
+# Simulation time: 539501 ps
+# Simulation time: 611501 ps
+# Simulation time: 611501 ps
+# Simulation time: 611501 ps
+# Simulation time: 611501 ps
+# Simulation time: 611501 ps
+# Simulation time: 611501 ps
+# Simulation time: 611501 ps
+# Simulation time: 611501 ps
+# Simulation time: 680500 ps
+# Simulation time: 680500 ps
+# Simulation time: 680500 ps
+# Simulation time: 680500 ps
+# Simulation time: 680500 ps
+# Simulation time: 680500 ps
+# Simulation time: 680500 ps
+# Simulation time: 680500 ps
+# Simulation time: 745501 ps
+# Simulation time: 745501 ps
+# Simulation time: 745501 ps
+# Simulation time: 745501 ps
+# Simulation time: 745501 ps
+# Simulation time: 745501 ps
+# Simulation time: 745501 ps
+# Simulation time: 745501 ps
+# Simulation time: 815501 ps
+# Simulation time: 815501 ps
+# Simulation time: 815501 ps
+# Simulation time: 815501 ps
+# Simulation time: 815501 ps
+# Simulation time: 815501 ps
+# Simulation time: 815501 ps
+# Simulation time: 815501 ps
+# Simulation time: 882500 ps
+# Simulation time: 882500 ps
+# Simulation time: 882500 ps
+# Simulation time: 882500 ps
+# Simulation time: 882500 ps
+# Simulation time: 882500 ps
+# Simulation time: 882500 ps
+# Simulation time: 882500 ps
+# Simulation time: 949500 ps
+# Simulation time: 949500 ps
+# Simulation time: 949500 ps
+# Simulation time: 949500 ps
+# Simulation time: 949500 ps
+# Simulation time: 949500 ps
 # ** Note: $finish    : Waveform4.vwf.vt(72)
 #    Time: 1 us  Iteration: 0  Instance: /YouseiOS_vlg_vec_tst
-# End time: 18:22:42 on Nov 16,2019, Elapsed time: 0:01:08
+# End time: 02:25:40 on Nov 17,2019, Elapsed time: 0:04:18
 # Errors: 0, Warnings: 2

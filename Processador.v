@@ -1,15 +1,15 @@
 //module Processador(Clock,Reset,Type,Set,Swap,Switches,OutputData);
-module Processador(Clock, Reset, Switches, OutputData, InputPC, Endereco, Instrucao, WriteHD,Resultado, DeslocamentoMemoria);
+module Processador(Clock, Reset, Switches, OutputData, InputPC, Endereco, Instrucao, WriteHD,Resultado, DeslocamentoMemoria, ReadData);
 	
 	input Clock,Reset;
 	input [12:0] Switches;
-	output [31:0] OutputData, InputPC, Resultado;
+	output wire [31:0] OutputData, InputPC, Resultado, ReadData;
 	output WriteHD;
 	input [31:0] Instrucao, Endereco, DeslocamentoMemoria;
 	
-	wire[31:0] ImediatoExtendido,Offset,DataIO,ReadData,ResultadoSoma,OutADD,
+	wire[31:0] ImediatoExtendido,Offset,DataIO,ResultadoSoma,OutADD,
 	Saida_Dados_2,M2R,Dados_1,Dados_2,LogicalData;
-	wire Zero;
+	wire Zero,Syscall_Sign;
 	wire[4:0] WR,indice;
 	
 	// Variáveis Unidade de Controle
@@ -33,13 +33,13 @@ module Processador(Clock, Reset, Switches, OutputData, InputPC, Endereco, Instru
 	ADD A(TypeJR,Dados_1,ImediatoExtendido,ResultadoSoma);						 								// ADD do Deslocador de Bits
 	ULA ULA(Dados_1,Saida_Dados_2,Instrucao[31:26],Instrucao[5:0],OpALU,Zero,Resultado);	// Unidade Lógica e Aritmética
 	
-	assign LogicalData = Resultado + DeslocamentoMemoria;
+	MUX_MemoryShift MMS(Syscall_Sign,Resultado,DeslocamentoMemoria,LogicalData);
 	MemoriaDados MD(LogicalData,Dados_2,MemRead,MemWrite,ReadData,Clock);
 	
 	Mux_PCSrc MPCS(Zero,Desvio,ResultadoSoma,OutADD,InputPC);										// MUX para PCSrc
-	Mux_4 Mux_4(ReadData,DataIO,Resultado,Resultado + 32'B00000000000000000000000000000001,Mem2Reg,M2R);												// MUX Memory/ModuloIO/ULAResult																												//
+	Mux_4 Mux_4(ReadData,DataIO,Resultado,Resultado + 32'B00000000000000000000000000000001,Mem2Reg,M2R); // MUX Memory/ModuloIO/ULAResult																												//
 	UnidadedeControle UC(Instrucao[31:26],OpIO,OpALU,MemRead,MemWrite,RegWrite
-								,AluSrc,RegDst,Desvio,Mem2Reg,HaltIAS,TypeJR,WriteHD);
+								,AluSrc,RegDst,Desvio,Mem2Reg,HaltIAS,TypeJR,WriteHD,Syscall_Sign);
 	ModuloIO ModuloIO(Clock,Reset,Switches,Set,HaltIAS,OpIO,ImediatoExtendido,Dados_1,Halt,DataIO,OutputData); // Modulo I/O										 		 // Extensor de Sina																																			 // Interface de Comunicacao
 
 	// Partes do SO

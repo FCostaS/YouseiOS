@@ -1,13 +1,14 @@
-module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegDst,Desvio,Mem2Reg,Halt,TypeJR,WriteHD);
+module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegDst,Desvio,Mem2Reg,Halt,TypeJR,WriteHD,Syscall_Sign);
 
 	input [5:0] Opcode;
-	output reg OpIO,MemRead,MemWrite,RegWrite,AluSrc,RegDst,Desvio,Halt,TypeJR,WriteHD;
+	output reg OpIO,MemRead,MemWrite,RegWrite,AluSrc,RegDst,Desvio,Halt,TypeJR,WriteHD,Syscall_Sign;
 	output reg[5:0] OpALU;
 	output reg[1:0] Mem2Reg;
 
 	always@(Opcode)
 	begin
 		Halt = 1'B0;
+		Syscall_Sign = 1'B0;
 
 		case(Opcode)
 			6'B000000: // ARITMETICAS
@@ -237,7 +238,7 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			WriteHD = 1'B0;
 			end
 			
-			6'B010000: // equal (SET) (16)
+			6'B010000: // equal () (16)
 			begin
 			OpIO 		= 1'B0;
 			RegDst 	= 1'B1;
@@ -422,14 +423,15 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			OpIO 		= 1'B0;
 			RegDst 	= 1'B0;
 			RegWrite = 1'B0;
-			AluSrc 	= 1'B0;
-			Mem2Reg 	= 2'B10;
-			MemRead 	= 1'B0;
+			AluSrc 	= 1'B1;
+			Mem2Reg 	= 2'B00;
+			MemRead 	= 1'B1;
 			MemWrite = 1'B0;
 			Desvio 	= 1'B0;
 			OpALU 	= 6'B000000;
 			TypeJR   = 1'B0;
 			WriteHD  = 1'B0;
+			Syscall_Sign = 1'B1;
 			end
 			
 			6'B011101: // CREATE_FILE

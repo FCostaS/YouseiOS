@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ProcessadorAOC
-Sat Nov 16 18:08:32 2019
+Thu Nov 21 15:20:18 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -79,13 +79,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 16 18:08:32 2019       ;
+; Analysis & Synthesis Status        ; Successful - Thu Nov 21 15:20:18 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ProcessadorAOC                              ;
 ; Top-level Entity Name              ; YouseiOS                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 4,711                                       ;
-;     Total combinational functions  ; 3,649                                       ;
+; Total logic elements               ; 4,724                                       ;
+;     Total combinational functions  ; 3,657                                       ;
 ;     Dedicated logic registers      ; 1,191                                       ;
 ; Total registers                    ; 1191                                        ;
 ; Total pins                         ; 357                                         ;
@@ -195,7 +195,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.2%      ;
 ;     Processor 3            ;   0.1%      ;
 ;     Processor 4            ;   0.1%      ;
 +----------------------------+-------------+
@@ -227,6 +227,7 @@ refer to the applicable agreement for further details.
 ; ProccessControlBlock.v                                    ; yes             ; User Verilog HDL File                                 ; /home/jimmy/YouseiOS/ProccessControlBlock.v                                             ;         ;
 ; VARIAVEIS_AMBIENTE.v                                      ; yes             ; User Verilog HDL File                                 ; /home/jimmy/YouseiOS/VARIAVEIS_AMBIENTE.v                                               ;         ;
 ; TemporizadorRoundRobin.v                                  ; yes             ; User Verilog HDL File                                 ; /home/jimmy/YouseiOS/TemporizadorRoundRobin.v                                           ;         ;
+; MUX_MemoryShift.v                                         ; yes             ; User Verilog HDL File                                 ; /home/jimmy/YouseiOS/MUX_MemoryShift.v                                                  ;         ;
 ; Processador.v                                             ; yes             ; Auto-Found Verilog HDL File                           ; /home/jimmy/YouseiOS/Processador.v                                                      ;         ;
 ; SistemaDeArquivos.v                                       ; yes             ; Auto-Found Verilog HDL File                           ; /home/jimmy/YouseiOS/SistemaDeArquivos.v                                                ;         ;
 ; MemoryManagementUnit.v                                    ; yes             ; Auto-Found Verilog HDL File                           ; /home/jimmy/YouseiOS/MemoryManagementUnit.v                                             ;         ;
@@ -283,16 +284,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 4,711          ;
+; Estimated Total logic elements              ; 4,724          ;
 ;                                             ;                ;
-; Total combinational functions               ; 3649           ;
+; Total combinational functions               ; 3657           ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 2354           ;
-;     -- 3 input functions                    ; 1063           ;
-;     -- <=2 input functions                  ; 232            ;
+;     -- 4 input functions                    ; 2355           ;
+;     -- 3 input functions                    ; 1064           ;
+;     -- <=2 input functions                  ; 238            ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 2776           ;
+;     -- normal mode                          ; 2784           ;
 ;     -- arithmetic mode                      ; 873            ;
 ;                                             ;                ;
 ; Total registers                             ; 1191           ;
@@ -306,7 +307,7 @@ refer to the applicable agreement for further details.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; Clock50M~input ;
 ; Maximum fan-out                             ; 1351           ;
-; Total fan-out                               ; 19099          ;
+; Total fan-out                               ; 19150          ;
 ; Average fan-out                             ; 3.34           ;
 +---------------------------------------------+----------------+
 
@@ -316,8 +317,8 @@ refer to the applicable agreement for further details.
 +------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                     ; Entity Name          ; Library Name ;
 +------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
-; |YouseiOS                                      ; 3649 (0)            ; 1191 (0)                  ; 37568       ; 6            ; 0       ; 3         ; 357  ; 0            ; |YouseiOS                                                                                                                                               ; YouseiOS             ; work         ;
-;    |BIOS:BIOSSystem|                           ; 82 (69)             ; 43 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|BIOS:BIOSSystem                                                                                                                               ; BIOS                 ; work         ;
+; |YouseiOS                                      ; 3657 (0)            ; 1191 (0)                  ; 37568       ; 6            ; 0       ; 3         ; 357  ; 0            ; |YouseiOS                                                                                                                                               ; YouseiOS             ; work         ;
+;    |BIOS:BIOSSystem|                           ; 81 (68)             ; 43 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|BIOS:BIOSSystem                                                                                                                               ; BIOS                 ; work         ;
 ;       |POST:PostFirware|                       ; 13 (13)             ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|BIOS:BIOSSystem|POST:PostFirware                                                                                                              ; POST                 ; work         ;
 ;    |HDSimulado:HD|                             ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|HDSimulado:HD                                                                                                                                 ; HDSimulado           ; work         ;
 ;       |altsyncram:ram_rtl_0|                   ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|HDSimulado:HD|altsyncram:ram_rtl_0                                                                                                            ; altsyncram           ; work         ;
@@ -330,15 +331,16 @@ refer to the applicable agreement for further details.
 ;    |ProccessControlBlock:BCP|                  ; 35 (35)             ; 41 (41)                   ; 352         ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|ProccessControlBlock:BCP                                                                                                                      ; ProccessControlBlock ; work         ;
 ;       |altsyncram:Contexto_PC_rtl_0|           ; 0 (0)               ; 0 (0)                     ; 352         ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|ProccessControlBlock:BCP|altsyncram:Contexto_PC_rtl_0                                                                                         ; altsyncram           ; work         ;
 ;          |altsyncram_lrd1:auto_generated|      ; 0 (0)               ; 0 (0)                     ; 352         ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|ProccessControlBlock:BCP|altsyncram:Contexto_PC_rtl_0|altsyncram_lrd1:auto_generated                                                          ; altsyncram_lrd1      ; work         ;
-;    |Processador:CPU|                           ; 3355 (38)           ; 1056 (0)                  ; 4096        ; 6            ; 0       ; 3         ; 0    ; 0            ; |YouseiOS|Processador:CPU                                                                                                                               ; Processador          ; work         ;
+;    |Processador:CPU|                           ; 3363 (32)           ; 1056 (0)                  ; 4096        ; 6            ; 0       ; 3         ; 0    ; 0            ; |YouseiOS|Processador:CPU                                                                                                                               ; Processador          ; work         ;
 ;       |ADD_Offset:AO|                          ; 96 (96)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|ADD_Offset:AO                                                                                                                 ; ADD_Offset           ; work         ;
 ;       |MUX_Mem2Reg:MM2R|                       ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|MUX_Mem2Reg:MM2R                                                                                                              ; MUX_Mem2Reg          ; work         ;
+;       |MUX_MemoryShift:MMS|                    ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|MUX_MemoryShift:MMS                                                                                                           ; MUX_MemoryShift      ; work         ;
 ;       |MUX_Reg2ALU:MR2A|                       ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|MUX_Reg2ALU:MR2A                                                                                                              ; MUX_Reg2ALU          ; work         ;
 ;       |MemoriaDados:MD|                        ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|MemoriaDados:MD                                                                                                               ; MemoriaDados         ; work         ;
 ;          |altsyncram:Memoria_rtl_0|            ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|MemoriaDados:MD|altsyncram:Memoria_rtl_0                                                                                      ; altsyncram           ; work         ;
 ;             |altsyncram_ksd1:auto_generated|   ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|MemoriaDados:MD|altsyncram:Memoria_rtl_0|altsyncram_ksd1:auto_generated                                                       ; altsyncram_ksd1      ; work         ;
 ;       |ModuloIO:ModuloIO|                      ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|ModuloIO:ModuloIO                                                                                                             ; ModuloIO             ; work         ;
-;       |Mux_4:Mux_4|                            ; 64 (64)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|Mux_4:Mux_4                                                                                                                   ; Mux_4                ; work         ;
+;       |Mux_4:Mux_4|                            ; 65 (65)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|Mux_4:Mux_4                                                                                                                   ; Mux_4                ; work         ;
 ;       |Mux_PCSrc:MPCS|                         ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|Mux_PCSrc:MPCS                                                                                                                ; Mux_PCSrc            ; work         ;
 ;       |Registradores:Reg|                      ; 1394 (1394)         ; 1024 (1024)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|Registradores:Reg                                                                                                             ; Registradores        ; work         ;
 ;       |ULA:ULA|                                ; 1702 (559)          ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |YouseiOS|Processador:CPU|ULA:ULA                                                                                                                       ; ULA                  ; work         ;
@@ -349,7 +351,7 @@ refer to the applicable agreement for further details.
 ;                      |add_sub_8pc:add_sub_1|   ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|ULA:ULA|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider|add_sub_8pc:add_sub_1 ; add_sub_8pc          ; work         ;
 ;          |lpm_mult:Mult0|                      ; 28 (0)              ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |YouseiOS|Processador:CPU|ULA:ULA|lpm_mult:Mult0                                                                                                        ; lpm_mult             ; work         ;
 ;             |mult_7dt:auto_generated|          ; 28 (28)             ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |YouseiOS|Processador:CPU|ULA:ULA|lpm_mult:Mult0|mult_7dt:auto_generated                                                                                ; mult_7dt             ; work         ;
-;       |UnidadedeControle:UC|                   ; 22 (22)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|UnidadedeControle:UC                                                                                                          ; UnidadedeControle    ; work         ;
+;       |UnidadedeControle:UC|                   ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|Processador:CPU|UnidadedeControle:UC                                                                                                          ; UnidadedeControle    ; work         ;
 ;    |SistemaDeArquivos:Pages|                   ; 51 (39)             ; 45 (45)                   ; 352         ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|SistemaDeArquivos:Pages                                                                                                                       ; SistemaDeArquivos    ; work         ;
 ;       |altsyncram:Paginas_rtl_0|               ; 0 (0)               ; 0 (0)                     ; 352         ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|SistemaDeArquivos:Pages|altsyncram:Paginas_rtl_0                                                                                              ; altsyncram           ; work         ;
 ;          |altsyncram_lrd1:auto_generated|      ; 0 (0)               ; 0 (0)                     ; 352         ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|SistemaDeArquivos:Pages|altsyncram:Paginas_rtl_0|altsyncram_lrd1:auto_generated                                                               ; altsyncram_lrd1      ; work         ;
@@ -358,7 +360,7 @@ refer to the applicable agreement for further details.
 ;             |mpar_add:padder|                  ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|SistemaDeArquivos:Pages|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                                     ; mpar_add             ; work         ;
 ;                |lpm_add_sub:adder[0]|          ; 6 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|SistemaDeArquivos:Pages|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                                                ; lpm_add_sub          ; work         ;
 ;                   |add_sub_jgh:auto_generated| ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|SistemaDeArquivos:Pages|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_jgh:auto_generated                     ; add_sub_jgh          ; work         ;
-;    |VARIAVEIS_AMBIENTE:Vars|                   ; 3 (3)               ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|VARIAVEIS_AMBIENTE:Vars                                                                                                                       ; VARIAVEIS_AMBIENTE   ; work         ;
+;    |VARIAVEIS_AMBIENTE:Vars|                   ; 4 (4)               ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |YouseiOS|VARIAVEIS_AMBIENTE:Vars                                                                                                                       ; VARIAVEIS_AMBIENTE   ; work         ;
 +------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -439,7 +441,7 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; BIOS:BIOSSystem|BiosSign               ; 119     ;
+; BIOS:BIOSSystem|BiosSign               ; 120     ;
 ; Total number of inverted registers = 1 ;         ;
 +----------------------------------------+---------+
 
@@ -1265,22 +1267,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     CLR               ; 4                           ;
 ;     ENA               ; 1104                        ;
 ;     plain             ; 83                          ;
-; cycloneiii_lcell_comb ; 3651                        ;
+; cycloneiii_lcell_comb ; 3659                        ;
 ;     arith             ; 873                         ;
 ;         2 data inputs ; 111                         ;
 ;         3 data inputs ; 762                         ;
-;     normal            ; 2778                        ;
+;     normal            ; 2786                        ;
 ;         0 data inputs ; 32                          ;
 ;         1 data inputs ; 6                           ;
-;         2 data inputs ; 85                          ;
-;         3 data inputs ; 301                         ;
-;         4 data inputs ; 2354                        ;
+;         2 data inputs ; 91                          ;
+;         3 data inputs ; 302                         ;
+;         4 data inputs ; 2355                        ;
 ; cycloneiii_mac_mult   ; 3                           ;
 ; cycloneiii_mac_out    ; 3                           ;
 ; cycloneiii_ram_block  ; 160                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 142.60                      ;
-; Average LUT depth     ; 98.25                       ;
+; Average LUT depth     ; 98.27                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1289,7 +1291,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:07     ;
+; Top            ; 00:00:11     ;
 +----------------+--------------+
 
 
@@ -1299,7 +1301,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Nov 16 18:08:12 2019
+    Info: Processing started: Thu Nov 21 15:19:49 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProcessadorAOC -c ProcessadorAOC
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1366,8 +1368,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file Tempori
     Info (12023): Found entity 1: TemporizadorRoundRobin File: /home/jimmy/YouseiOS/TemporizadorRoundRobin.v Line: 1
 Warning (12019): Can't analyze file -- file CreatePage.v is missing
 Warning (12019): Can't analyze file -- file IndexInstructionsMemory.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file MUX_MemoryShift.v
+    Info (12023): Found entity 1: MUX_MemoryShift File: /home/jimmy/YouseiOS/MUX_MemoryShift.v Line: 1
 Info (12127): Elaborating entity "YouseiOS" for the top level hierarchy
-Warning (10034): Output port "FisicalData" at YouseiOS.v(7) has no driver File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
 Info (12128): Elaborating entity "MemoriaInstrucoes" for hierarchy "MemoriaInstrucoes:MI" File: /home/jimmy/YouseiOS/YouseiOS.v Line: 18
 Warning (12125): Using design file Processador.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: Processador File: /home/jimmy/YouseiOS/Processador.v Line: 2
@@ -1380,6 +1383,7 @@ Info (12128): Elaborating entity "MUX_Reg2ALU" for hierarchy "Processador:CPU|MU
 Info (12128): Elaborating entity "ExtensorDeSinal" for hierarchy "Processador:CPU|ExtensorDeSinal:ES" File: /home/jimmy/YouseiOS/Processador.v Line: 32
 Info (12128): Elaborating entity "ADD" for hierarchy "Processador:CPU|ADD:A" File: /home/jimmy/YouseiOS/Processador.v Line: 33
 Info (12128): Elaborating entity "ULA" for hierarchy "Processador:CPU|ULA:ULA" File: /home/jimmy/YouseiOS/Processador.v Line: 34
+Info (12128): Elaborating entity "MUX_MemoryShift" for hierarchy "Processador:CPU|MUX_MemoryShift:MMS" File: /home/jimmy/YouseiOS/Processador.v Line: 36
 Info (12128): Elaborating entity "MemoriaDados" for hierarchy "Processador:CPU|MemoriaDados:MD" File: /home/jimmy/YouseiOS/Processador.v Line: 37
 Info (12128): Elaborating entity "Mux_PCSrc" for hierarchy "Processador:CPU|Mux_PCSrc:MPCS" File: /home/jimmy/YouseiOS/Processador.v Line: 39
 Info (12128): Elaborating entity "Mux_4" for hierarchy "Processador:CPU|Mux_4:Mux_4" File: /home/jimmy/YouseiOS/Processador.v Line: 40
@@ -1648,52 +1652,20 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LocalData[29]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
     Warning (13410): Pin "LocalData[30]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
     Warning (13410): Pin "LocalData[31]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[0]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[1]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[2]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[3]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[4]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[5]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[6]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[7]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[8]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[9]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[10]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[11]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[12]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[13]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[14]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[15]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[16]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[17]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[18]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[19]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[20]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[21]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[22]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[23]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[24]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[25]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[26]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[27]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[28]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[29]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[30]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
-    Warning (13410): Pin "FisicalData[31]" is stuck at GND File: /home/jimmy/YouseiOS/YouseiOS.v Line: 7
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 5352 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 5360 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 355 output pins
-    Info (21061): Implemented 4829 logic cells
+    Info (21061): Implemented 4837 logic cells
     Info (21064): Implemented 160 RAM segments
     Info (21062): Implemented 6 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 91 warnings
-    Info: Peak virtual memory: 1064 megabytes
-    Info: Processing ended: Sat Nov 16 18:08:32 2019
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:39
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 58 warnings
+    Info: Peak virtual memory: 1082 megabytes
+    Info: Processing ended: Thu Nov 21 15:20:18 2019
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:00:36
 
 

@@ -9,7 +9,7 @@ module YouseiOS(Clock50M,Reset,HD_data, BIOS_Instruction, Indice_HD, Page, Page_
 	
 	wire Clock;
 	wire [12:0] Switches;
-	wire [31:0] MP_Instruction, PC_PID;
+	wire [31:0] MP_Instruction, PC_PID, ReadData;
 	wire [4:0] PID, MSG_OUT, PID_out;
 	wire SavePage, MSG_Sign, MemWirte;
 	
@@ -17,8 +17,8 @@ module YouseiOS(Clock50M,Reset,HD_data, BIOS_Instruction, Indice_HD, Page, Page_
 	
 	MemoriaInstrucoes MI(HD_data, FisicalAddress, MemWirte, Clock, MP_Instruction);
 	
-	Processador CPU(.Clock(Clock50M), .Reset(~Reset), .Switches(Switches), .OutputData(Output), .InputPC(PC_CPU),
-						 .Endereco(PC_PID), .Instrucao(Instrucao), .WriteHD(WriteHD), .Resultado(Indice_HD), .DeslocamentoMemoria(LocalData) );
+	Processador CPU(.Clock(Clock50M), .Reset(~Reset), .Switches(Switches), .OutputData(Output), .InputPC(PC_CPU), .Endereco(PC_PID),
+						 .Instrucao(Instrucao), .WriteHD(WriteHD), .Resultado(Indice_HD), .DeslocamentoMemoria(LocalData), .ReadData(FisicalData) );
 	
 	ProccessControlBlock BCP(Clock, PID_out, PC_CPU, PC_PID);
 	
@@ -34,7 +34,7 @@ module YouseiOS(Clock50M,Reset,HD_data, BIOS_Instruction, Indice_HD, Page, Page_
 	
 	MemoryManagementUnit MMU(BiosSign, PC_PID, Page_out, FisicalAddress);
 	
-	VARIAVEIS_AMBIENTE Vars(.clk(Clock), .reset(Reset), .SavePage(SavePage), .Instrucao(Instrucao), .PID_out(PID_out),
+	VARIAVEIS_AMBIENTE Vars(.clk(Clock), .reset(Reset), .SavePage(SavePage), .Instrucao(Instrucao), .FisicalData(FisicalData), .PID_out(PID_out),
 									.MSG_OUT(MSG_OUT), .MSG_Sign(MSG_Sign), .Page_Update(Page_Update), .MemWrite(MemWirte) );
 	
 endmodule
