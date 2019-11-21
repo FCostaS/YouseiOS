@@ -1,0 +1,17 @@
+module MUX_MemoryShift(
+	input [31:0] EnderecoLogico,Deslocamento,
+	output [31:0] Deslocamento
+	);
+	
+	always @(EnderecoLogico or Deslocamento)
+	begin
+	
+	
+	
+	
+	
+	
+	end
+	
+	
+endmodule

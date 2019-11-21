@@ -1,6 +1,6 @@
 module VARIAVEIS_AMBIENTE(
 	input clk, reset, SavePage,
-	input [31:0] Instrucao,
+	input [31:0] Instrucao, FisicalData,
 	output reg [4:0] PID_out, MSG_OUT,
 	output reg MSG_Sign, Page_Update, MemWrite
 	);
@@ -33,8 +33,8 @@ module VARIAVEIS_AMBIENTE(
 		
 		SET_PID:
 		begin
-			PID        <= Instrucao[4:0];
-			Temporizer <= 1'B0;
+			PID        <= FisicalData[4:0];
+			Temporizer <= 1'B1;
 			MSG_Sign   <= 1'B0;
 			reset_RR   <= 1'B0;
 			MemWrite   <= 1'B0;

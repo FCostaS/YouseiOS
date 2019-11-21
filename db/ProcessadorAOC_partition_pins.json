@@ -1172,6 +1172,134 @@
 					"strict" : false
 				},
 				{
+					"name" : "FisicalData[0]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[1]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[2]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[3]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[4]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[5]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[6]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[7]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[8]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[9]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[10]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[11]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[12]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[13]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[14]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[15]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[16]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[17]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[18]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[19]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[20]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[21]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[22]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[23]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[24]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[25]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[26]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[27]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[28]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[29]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[30]",
+					"strict" : false
+				},
+				{
+					"name" : "FisicalData[31]",
+					"strict" : false
+				},
+				{
 					"name" : "Clock50M",
 					"strict" : false
 				},
