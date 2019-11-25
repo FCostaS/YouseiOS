@@ -13,7 +13,7 @@ module SistemaDeArquivos
 	always @ (PID)
 	begin
 		
-		LocalData <= 70 * PID;
+		LocalData <= 50 * PID;
 	
 	end
 

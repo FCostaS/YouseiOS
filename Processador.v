@@ -1,15 +1,16 @@
 //module Processador(Clock,Reset,Type,Set,Swap,Switches,OutputData);
-module Processador(Clock, Reset, Switches, OutputData, InputPC, Endereco, Instrucao, WriteHD,Resultado, DeslocamentoMemoria, ReadData);
+module Processador(Clock, Reset, Switches, OutputData, InputPC, Endereco, Instrucao, WriteHD,Resultado, DeslocamentoMemoria, PID_CPU,ReadData);
 	
 	input Clock,Reset;
 	input [12:0] Switches;
-	output wire [31:0] OutputData, InputPC, Resultado, ReadData;
+	output wire [31:0] OutputData, InputPC, Resultado,ReadData;
 	output WriteHD;
+	output reg [4:0] PID_CPU;
 	input [31:0] Instrucao, Endereco, DeslocamentoMemoria;
 	
 	wire[31:0] ImediatoExtendido,Offset,DataIO,ResultadoSoma,OutADD,
-	Saida_Dados_2,M2R,Dados_1,Dados_2,LogicalData;
-	wire Zero,Syscall_Sign;
+	Saida_Dados_2,Dados_1,Dados_2,LogicalData,M2R;
+	wire Zero,Syscall_Sign,PID_wr;
 	wire[4:0] WR,indice;
 	
 	// Variáveis Unidade de Controle
@@ -39,9 +40,17 @@ module Processador(Clock, Reset, Switches, OutputData, InputPC, Endereco, Instru
 	Mux_PCSrc MPCS(Zero,Desvio,ResultadoSoma,OutADD,InputPC);										// MUX para PCSrc
 	Mux_4 Mux_4(ReadData,DataIO,Resultado,Resultado + 32'B00000000000000000000000000000001,Mem2Reg,M2R); // MUX Memory/ModuloIO/ULAResult																												//
 	UnidadedeControle UC(Instrucao[31:26],OpIO,OpALU,MemRead,MemWrite,RegWrite
-								,AluSrc,RegDst,Desvio,Mem2Reg,HaltIAS,TypeJR,WriteHD,Syscall_Sign);
-	ModuloIO ModuloIO(Clock,Reset,Switches,Set,HaltIAS,OpIO,ImediatoExtendido,Dados_1,Halt,DataIO,OutputData); // Modulo I/O										 		 // Extensor de Sina																																			 // Interface de Comunicacao
+								,AluSrc,RegDst,Desvio,Mem2Reg,HaltIAS,TypeJR,WriteHD,Syscall_Sign,PID_wr);
+	ModuloIO ModuloIO(Clock,Reset,Switches,Set,HaltIAS,OpIO,ImediatoExtendido,Dados_1,Halt,DataIO,OutputData); // Modulo I/O									 		 // Extensor de Sina																																			 // Interface de Comunicacao
 
+	always @ (posedge Clock)
+	begin
+	
+		if(PID_wr)
+			PID_CPU <= M2R[4:0];
+	
+	end
+	
 	// Partes do SO
 	/*wire [31:0] HD_data, BIOS_Instruction, PC_HD, Page, Page_out;
 	wire HD_wr, BiosSign, SavePage;
