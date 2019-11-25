@@ -1,7 +1,6 @@
 module TemporizadorRoundRobin(
 	input clk, reset, Atv_Temp, Block,
-	input [4:0] PID_in,
-	output reg [4:0] PID_out
+	output reg SO_Kernel
 );
 
 	reg [5:0] Count;
@@ -26,20 +25,14 @@ module TemporizadorRoundRobin(
 	parameter S0 = 1'B0, S1 = 1'B1;
 
 	// Output depends only on the state
-	always @ (state or PID_in) begin
+	always @ (state) begin
 		case (state)
 			S0:
-			begin
-				PID_out <= 5'B00000;
-			end
+				SO_Kernel = 1'b0;
 			S1:
-			begin
-				PID_out <= PID_in;
-			end
+				SO_Kernel = 1'b1;
 			default:
-			begin
-				PID_out <= 5'B00000;
-			end
+				SO_Kernel = 1'b0;
 		endcase
 	end
 

@@ -1,7 +1,9 @@
 module VARIAVEIS_AMBIENTE(
 	input clk, reset, SavePage,
-	input [31:0] Instrucao, FisicalData,
-	output reg [4:0] PID_out, MSG_OUT,
+	input [31:0] Instrucao,
+	input [4:0] PID_Data,
+	output wire [4:0] PID_out, 
+	output reg [4:0] MSG_OUT,
 	output reg MSG_Sign, Page_Update, MemWrite
 	);
 
@@ -15,7 +17,6 @@ module VARIAVEIS_AMBIENTE(
 				 END_FILE    = 6'B010110;
 	
 	wire [5:0] Opcode;
-	wire SO_Kernel;
 	reg [4:0] PID;
 	reg Temporizer, reset_RR, Block_Temporizer;
 	
@@ -33,7 +34,7 @@ module VARIAVEIS_AMBIENTE(
 		
 		SET_PID:
 		begin
-			PID        <= FisicalData[4:0];
+			PID        <= PID_Data;
 			Temporizer <= 1'B1;
 			MSG_Sign   <= 1'B0;
 			reset_RR   <= 1'B0;
@@ -51,6 +52,7 @@ module VARIAVEIS_AMBIENTE(
 		
 		ROUND_ROBIN:
 		begin
+			MSG_OUT    <= 5'B00000;
 			Temporizer <= 1'B1;
 			MSG_Sign   <= 1'B0;
 			reset_RR   <= 1'B0;
@@ -59,12 +61,16 @@ module VARIAVEIS_AMBIENTE(
 		
 		KERNEL_SWAP:
 		begin
+			MSG_OUT    <= 5'B00000;
+			Temporizer <= 1'B0;
+			MSG_Sign   <= 1'B0;
 			reset_RR   <= 1'B1;
 			MemWrite   <= 1'B0;
 		end
 		
 		HD_READ:
 		begin
+			MSG_OUT    <= 5'B00000;
 			Temporizer <= 1'B0;
 			MSG_Sign   <= 1'B0;
 			reset_RR   <= 1'B0;
@@ -73,6 +79,7 @@ module VARIAVEIS_AMBIENTE(
 		
 		default:
 		begin
+			MSG_OUT    <= 5'B00000;
 			Temporizer <= 1'B0;
 			MSG_Sign   <= 1'B0;
 			reset_RR   <= 1'B0;
@@ -80,7 +87,7 @@ module VARIAVEIS_AMBIENTE(
 		end
 		
 	endcase
-	
+
 	end
 	
 	// Atualizacao da Pagina
@@ -95,13 +102,8 @@ module VARIAVEIS_AMBIENTE(
 	end
 	
 	// Escolha entre modo Kernel e modo usuario
-	always @(SO_Kernel or Opcode or PID)
-	begin
-	
-		/*if(SO_Kernel)
-			PID_out <= 5'B00000;
-		else*/
-		PID_out <= PID;
+	always @(Opcode or Temporizer)
+	begin	
 			
 		if(Opcode == INPUT)
 			Block_Temporizer <= 1'B1;
@@ -110,7 +112,7 @@ module VARIAVEIS_AMBIENTE(
 			
 	end
 	
-	TemporizadorRoundRobin TRR(.clk(clk), .reset(reset_RR), .Atv_Temp(Temporizer), .Block(Block_Temporizer), .SO_Kernel(SO_Kernel));
+	TemporizadorRoundRobin TRR(.clk(clk), .reset(reset_RR), .Atv_Temp(Temporizer), .Block(Block_Temporizer), .PID_in(PID) , .PID_out(PID_out));
 
 
 endmodule

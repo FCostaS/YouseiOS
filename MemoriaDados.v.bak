@@ -3,7 +3,7 @@ module MemoriaDados(Resultado,DadosEscrita,MemRead,MemWrite,ReadData,Clock);
 	input MemRead,MemWrite,Clock;
 	output reg [31:0] ReadData;
 	
-	reg[31:0] Memoria[1023:0];
+	reg[31:0] Memoria[127:0];
 	
 	always@(negedge Clock)
 	begin
