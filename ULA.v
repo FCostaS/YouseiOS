@@ -159,6 +159,12 @@ module ULA(Dados_1,Dados_2,Opcode,funct,OpALU,Zero,Resultado); // Dados com 32 b
 				Resultado = Dados_1 + Dados_2; 				// Ler		(PID LOAD)
 				Zero = 1'B0;
 			end
+			
+			6'B100001: // Swap Kernel
+			begin
+				Resultado = Dados_1;				   			// Copiar (Move)
+				Zero = 1'B0;
+			end
 				
 			default:
 				begin
