@@ -69,7 +69,7 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			Desvio 	<= 1'B0;
 			OpALU 	<= 6'B000000;
 			TypeJR   <= 1'B0;
-			WriteHD <= 1'B0;
+			WriteHD  <= 1'B0;
 			end
 			
 			6'B000100: // SLT
@@ -499,8 +499,8 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			begin
 			OpIO 		<= 1'B0;
 			RegDst 	<= 1'B0;
-			RegWrite <= 1'B0;
-			AluSrc 	<= 1'B0;
+			RegWrite <= 1'B1;
+			AluSrc 	<= 1'B1;
 			Mem2Reg 	<= 2'B10;
 			MemRead 	<= 1'B0;
 			MemWrite <= 1'B0;

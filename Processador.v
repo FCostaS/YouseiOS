@@ -5,7 +5,7 @@ module Processador(Clock, Reset, Switches, OutputData, InputPC, Endereco, Instru
 	input [12:0] Switches;
 	output wire [31:0] OutputData, InputPC, Resultado,ReadData;
 	output WriteHD;
-	output reg [4:0] PID_CPU;
+	output wire [4:0] PID_CPU;
 	input [31:0] Instrucao, Endereco, DeslocamentoMemoria;
 	
 	wire[31:0] ImediatoExtendido,Offset,DataIO,ResultadoSoma,OutADD,
@@ -43,13 +43,7 @@ module Processador(Clock, Reset, Switches, OutputData, InputPC, Endereco, Instru
 								,AluSrc,RegDst,Desvio,Mem2Reg,HaltIAS,TypeJR,WriteHD,Syscall_Sign,PID_wr);
 	ModuloIO ModuloIO(Clock,Reset,Switches,Set,HaltIAS,OpIO,ImediatoExtendido,Dados_1,Halt,DataIO,OutputData); // Modulo I/O									 		 // Extensor de Sina																																			 // Interface de Comunicacao
 
-	always @ (posedge Clock)
-	begin
-	
-		if(PID_wr)
-			PID_CPU <= M2R[4:0];
-	
-	end
+	assign PID_CPU = M2R[4:0];
 	
 	// Partes do SO
 	/*wire [31:0] HD_data, BIOS_Instruction, PC_HD, Page, Page_out;
