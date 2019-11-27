@@ -5,7 +5,7 @@ module TemporizadorRoundRobin(
 );
 
 	reg [5:0] Count;
-	parameter Quantum = 6'B111111; // Quantum de 30 instruçoes
+	parameter Quantum = 6'B111110; // Quantum de 63 instruçoes
 
 	always @ (posedge clk)
 	begin
@@ -35,10 +35,6 @@ module TemporizadorRoundRobin(
 			S1:
 			begin
 				PID_out <= PID_in;
-			end
-			default:
-			begin
-				PID_out <= 5'B00000;
 			end
 		endcase
 	end

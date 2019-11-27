@@ -34,11 +34,11 @@ module VARIAVEIS_AMBIENTE(
 		
 		SET_PID:
 		begin
-			PID        <= PID_Data;
-			Temporizer <= 1'B1;
-			MSG_Sign   <= 1'B0;
-			reset_RR   <= 1'B0;
-			MemWrite   <= 1'B0;
+			PID        = PID_Data;
+			Temporizer = 1'B1;
+			MSG_Sign   = 1'B0;
+			reset_RR   = 1'B0;
+			MemWrite   = 1'B0;
 		end
 		
 		EMIT_MSG:
@@ -97,13 +97,13 @@ module VARIAVEIS_AMBIENTE(
 		begin
 			Page_Update <= 1'B1;
 		end
-			else
-				Page_Update <= 1'B0;
+		else
+			Page_Update <= 1'B0;
 	end
 	
 	// Escolha entre modo Kernel e modo usuario
 	always @(Opcode or Temporizer)
-	begin	
+	begin
 			
 		if(Opcode == INPUT)
 			Block_Temporizer <= 1'B1;
