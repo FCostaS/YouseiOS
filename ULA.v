@@ -162,7 +162,7 @@ module ULA(Dados_1,Dados_2,Opcode,funct,OpALU,Zero,Resultado); // Dados com 32 b
 			
 			6'B100001: // Swap Kernel
 			begin
-				Resultado = Dados_1;				   			// Copiar (Move)
+				Resultado = Dados_1 + Dados_2; 				// Gravar	(STORE)
 				Zero = 1'B0;
 			end
 				

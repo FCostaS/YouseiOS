@@ -9,7 +9,7 @@ module ProccessControlBlock(
 	
 	always@(posedge clk)
 	begin
-		Contexto_PC[PID] <= PC_in;
+		Contexto_PC[PID] = PC_in;
 	end
 	
 	assign PC_out = Contexto_PC[PID];
