@@ -4,7 +4,7 @@ module Registradores(rs,rt,WR,M2R,RegWrite,Dados_1,Dados_2,Clock);
 	input [31:0] M2R;						// Memória para Registrador
 	input RegWrite, Clock;
 	
-	output wire [31:0] Dados_1,Dados_2;  	// Dados de Saída
+	output [31:0] Dados_1,Dados_2;  	// Dados de Saída
 	reg [31:0] Registros[31:0];		// Banco de Registradores
 	
 	always@(posedge Clock)
@@ -14,9 +14,6 @@ module Registradores(rs,rt,WR,M2R,RegWrite,Dados_1,Dados_2,Clock);
 		begin
 			Registros[WR] <= M2R;
 		end
-		
-		/*Dados_1 = Registros[rs];
-		Dados_2 = Registros[rt];*/
 		
 	end
 	

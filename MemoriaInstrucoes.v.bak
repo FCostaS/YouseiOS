@@ -55,7 +55,7 @@ module MemoriaInstrucoes
 		addr_reg <= Endereco;
 	end
  
-	assign Instrucao = ram[Endereco];
+	assign Instrucao = ram[addr_reg];
 
 endmodule
 

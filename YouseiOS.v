@@ -9,7 +9,7 @@ module YouseiOS(Clock50M,Reset,HD_data, BIOS_Instruction, Indice_HD, Page, Page_
 	output wire BiosSign, Page_Update, WriteHD; // HD_wr
 	output wire [4:0] PID_CPU;
 
-	wire Clock;
+	wire Clock,NegClock;
 	wire [12:0] Switches;
 	wire [31:0] MP_Instruction, PC_PID;
 	wire [4:0] MSG_OUT;

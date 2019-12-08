@@ -7,11 +7,11 @@ module Mux_PCSrc(Zero,Desvio,ResultadoSoma,OutADD,InputPC);
 	begin
 		if( (Zero == 1'B0) || (Desvio == 1'B0) ) // OutADD||ResultadoSoma 0:1
 		begin
-			InputPC <= OutADD;
+			InputPC = OutADD;
 		end
 			else
 			begin
-				InputPC <= ResultadoSoma;
+				InputPC = ResultadoSoma;
 			end
 	end
 

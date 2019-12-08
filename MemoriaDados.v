@@ -1,7 +1,7 @@
 module MemoriaDados(Resultado,DadosEscrita,MemRead,MemWrite,ReadData,Clock);
 	input  [31:0] Resultado,DadosEscrita;
 	input MemRead,MemWrite,Clock;
-	output reg [31:0] ReadData;
+	output [31:0] ReadData;
 	
 	reg[31:0] Memoria[1023:0];
 	
@@ -10,12 +10,14 @@ module MemoriaDados(Resultado,DadosEscrita,MemRead,MemWrite,ReadData,Clock);
 	
 		if(MemWrite==1'B1)
 		begin
-			Memoria[Resultado] = DadosEscrita;
+			Memoria[Resultado] <= DadosEscrita;
 		end
-		if(MemRead==1'B1)
+		/*if(MemRead==1'B1)
 		begin
-			ReadData = Memoria[Resultado];
-		end
+			
+		end*/
 	end
+	
+	assign ReadData = Memoria[Resultado];
 	
 endmodule

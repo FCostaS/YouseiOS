@@ -7,11 +7,11 @@ module MUX_Reg2ALU(D1,D2,AluSrc,Saida);
 	begin
 		if( AluSrc == 1'B0 ) // D1||D2 0:1
 		begin
-			Saida <= D1;
+			Saida = D1;
 		end
 			else
 			begin
-				Saida <= D2;
+				Saida = D2;
 			end
 	end
 

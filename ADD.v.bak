@@ -5,15 +5,15 @@ module ADD(JR_Type,Dados_1,Shifted,ResultadoSoma);
 	
 	//assign ResultadoSoma = Shifted + OutADD;
 	//assign ResultadoSoma = Shifted;
-	always@(JR_Type or Shifted or Dados_1)
+	always@(*)
 	begin
 		if(JR_Type == 1'B0)
 		begin
-			ResultadoSoma <= Shifted;
+			ResultadoSoma = Shifted;
 		end
 			else
 			begin
-				ResultadoSoma <= Dados_1;
+				ResultadoSoma = Dados_1;
 			end
 	end
 

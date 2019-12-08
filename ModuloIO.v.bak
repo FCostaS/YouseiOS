@@ -5,9 +5,9 @@ module ModuloIO(Clock,Reset,Switches,Set,HaltIAS,OpIO,Endereco,DadosSaida,detect
 	output wire [31:0] DataIO;
 	output reg [31:0] OutputData;
 	
-	/*reg [1:0] state;
+	reg [1:0] state;
 	reg current_state, next_state;
-	parameter  A=1'b0, B=1'b1;*/
+	parameter  A=1'b0, B=1'b1;
 	
 	assign DataIO = {{19{1'B0}},Switches};
 	output reg detector_out;
@@ -24,7 +24,7 @@ module ModuloIO(Clock,Reset,Switches,Set,HaltIAS,OpIO,Endereco,DadosSaida,detect
 		end
 	end
 
-	/*always @(negedge Clock)
+	always @(negedge Clock)
 	begin
 	 if(Reset==0) 
 		current_state <= A;
@@ -58,7 +58,7 @@ module ModuloIO(Clock,Reset,Switches,Set,HaltIAS,OpIO,Endereco,DadosSaida,detect
 		 A:  detector_out <= 0;
 		 B:  detector_out <= 1;
 	 endcase
-	end*/
+	end
 	
 	
 endmodule

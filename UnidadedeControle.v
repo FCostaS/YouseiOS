@@ -7,9 +7,6 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 
 	always@(Opcode)
 	begin
-		Halt = 1'B0;
-		Syscall_Sign = 1'B0;
-		PID_wr = 1'B0;
 
 		case(Opcode)
 			6'B000000: // ARITMETICAS
@@ -23,8 +20,11 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			MemWrite <= 1'B0;
 			Desvio 	<= 1'B0;
 			OpALU 	<= 6'B000000;
-			TypeJR <= 1'B0;
-			WriteHD <= 1'B0;
+			TypeJR   <= 1'B0;
+			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B000001: // LOGICAS
@@ -38,8 +38,11 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			MemWrite <= 1'B0;
 			Desvio 	<= 1'B0;
 			OpALU 	<= 6'B000000;
-			TypeJR <= 1'B0;
-			WriteHD <= 1'B0;
+			TypeJR   <= 1'B0;
+			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B000010: // ADDI
@@ -53,8 +56,11 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			MemWrite <= 1'B0;
 			Desvio 	<= 1'B0;
 			OpALU 	<= 6'B000000;
-			TypeJR <= 1'B0;
-			WriteHD <= 1'B0;
+			TypeJR   <= 1'B0;
+			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B000011: // MOVE
@@ -70,6 +76,9 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			OpALU 	<= 6'B000000;
 			TypeJR   <= 1'B0;
 			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B000100: // SLT
@@ -83,8 +92,11 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			MemWrite <= 1'B0;
 			Desvio 	<= 1'B0;
 			OpALU 	<= 6'B000000;
-			TypeJR <= 1'B0;
-			WriteHD <= 1'B0;		
+			TypeJR   <= 1'B0;
+			WriteHD  <= 1'B0;	
+			PID_wr   <= 1'B0;	
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B000101: // Jump
@@ -98,8 +110,11 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			MemWrite <= 1'B0;
 			Desvio 	<= 1'B1;
 			OpALU 	<= 6'B000000;
-			TypeJR <= 1'B0;
-			WriteHD <= 1'B0;			
+			TypeJR   <= 1'B0;
+			WriteHD  <= 1'B0;	
+			PID_wr   <= 1'B0;	
+			Syscall_Sign <= 1'B0;
+			Halt     <= 1'B0;	
 			end
 
 			6'B000110: // Load
@@ -114,7 +129,10 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			Desvio 	<= 1'B0;
 			OpALU 	<= 6'B000000;
 			TypeJR   <= 1'B0;
-			WriteHD  <= 1'B0;		
+			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;		
 			end
 			
 			6'B000111: // Store
@@ -129,7 +147,10 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			Desvio 	<= 1'B0;
 			OpALU 	<= 6'B000000;
 			TypeJR   <= 1'B0;
-			WriteHD  <= 1'B0;		
+			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;	
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;	
 			end
 			
 			6'B001000: // IN
@@ -144,8 +165,10 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			MemWrite <= 1'B0;
 			Desvio 	<= 1'B0;
 			OpALU 	<= 6'B000000;
-			TypeJR <= 1'B0;
-			WriteHD <= 1'B0;		
+			TypeJR   <= 1'B0;
+			WriteHD  <= 1'B0;	
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
 			end	
 	
 			6'B001001: // OUT
@@ -160,7 +183,10 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			Desvio 	<= 1'B0;
 			OpALU 	<= 6'B000000;
 			TypeJR   <= 1'B0;
-			WriteHD <= 1'B0;
+			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			
@@ -175,8 +201,11 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			MemWrite <= 1'B0;
 			Desvio 	<= 1'B1;
 			OpALU 	<= 6'B000000;
-			TypeJR <= 1'B0;
-			WriteHD <= 1'B0;		
+			TypeJR   <= 1'B0;
+			WriteHD  <= 1'B0;	
+			PID_wr   <= 1'B0;	
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B001011: // BNE
@@ -191,7 +220,10 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			Desvio 	<= 1'B1;
 			OpALU 	<= 6'B000000;
 			TypeJR   <= 1'B0;
-			WriteHD <= 1'B0;
+			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B001100: // NOP (12)
@@ -206,7 +238,10 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			Desvio 	<= 1'B0;
 			OpALU 	<= 6'B000000;
 			TypeJR   <= 1'B0;
-			WriteHD <= 1'B0;
+			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B001101: // diff (13)
@@ -221,7 +256,10 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			Desvio 	<= 1'B0;
 			OpALU 	<= 6'B000000;
 			TypeJR   <= 1'B0;
-			WriteHD <= 1'B0;
+			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B001111: // sbt (15)
@@ -235,8 +273,11 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			MemWrite <= 1'B0;
 			Desvio 	<= 1'B0;
 			OpALU 	<= 6'B000000;
-			TypeJR <= 1'B0;
-			WriteHD <= 1'B0;
+			TypeJR   <= 1'B0;
+			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B010000: // equal () (16)
@@ -250,8 +291,11 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			MemWrite <= 1'B0;
 			Desvio 	<= 1'B0;
 			OpALU 	<= 6'B000000;
-			TypeJR <= 1'B0;
-			WriteHD <= 1'B0;
+			TypeJR   <= 1'B0;
+			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B010001: // sbte (17)
@@ -265,8 +309,11 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			MemWrite <= 1'B0;
 			Desvio 	<= 1'B0;
 			OpALU 	<= 6'B000000;
-			TypeJR <= 1'B0;
-			WriteHD <= 1'B0;
+			TypeJR   <= 1'B0;
+			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B010010: // slte (18)
@@ -280,8 +327,11 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			MemWrite <= 1'B0;
 			Desvio 	<= 1'B0;
 			OpALU 	<= 6'B000000;	
-			TypeJR <= 1'B0;
-			WriteHD <= 1'B0;
+			TypeJR   <= 1'B0;
+			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B010011: // JR (19)
@@ -296,7 +346,10 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			Desvio 	<= 1'B1;
 			OpALU 	<= 6'B000000;
 			TypeJR 	<= 1'B1;
-			WriteHD <= 1'B0;
+			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B010100: // SUBI
@@ -311,7 +364,10 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			Desvio 	<= 1'B0;
 			OpALU 	<= 6'B000000;			
 			TypeJR   <= 1'B0;
-			WriteHD <= 1'B0;
+			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B010101: // BEGIN_FILE
@@ -326,7 +382,10 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			Desvio 	<= 1'B0;
 			OpALU 	<= 6'B000000;
 			TypeJR   <= 1'B0;
-			WriteHD <= 1'B0;
+			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B010110: // END_FILE
@@ -341,7 +400,10 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			Desvio 	<= 1'B0;
 			OpALU 	<= 6'B000000;
 			TypeJR   <= 1'B0;
-			WriteHD <= 1'B0;
+			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B010111: // HD_HEAD
@@ -356,7 +418,10 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			Desvio 	<= 1'B0;
 			OpALU 	<= 6'B000000;
 			TypeJR   <= 1'B0;
-			WriteHD <= 1'B0;
+			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B011000: // HD_END
@@ -371,7 +436,10 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			Desvio 	<= 1'B0;
 			OpALU 	<= 6'B000000;
 			TypeJR   <= 1'B0;
-			WriteHD <= 1'B0;
+			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B011001: // HALT
@@ -386,7 +454,10 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			Desvio 	<= 1'B0;
 			OpALU 	<= 6'B000000;
 			TypeJR   <= 1'B0;
-			WriteHD <= 1'B0;
+			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B011010: // EMIT_MSG
@@ -402,6 +473,9 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			OpALU 	<= 6'B000000;
 			TypeJR   <= 1'B0;
 			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B011011: // ROUND_ROBIN
@@ -417,6 +491,9 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			OpALU 	<= 6'B000000;
 			TypeJR   <= 1'B0;
 			WriteHD  <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
+			PID_wr   <= 1'B0;
 			end
 			
 			6'B011100: // SET_PID
@@ -433,6 +510,8 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			TypeJR   <= 1'B0;
 			WriteHD  <= 1'B0;
 			PID_wr	<= 1'B1;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B011101: // CREATE_FILE
@@ -448,6 +527,9 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			OpALU 	<= 6'B000000;
 			TypeJR   <= 1'B0;
 			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B011110: // Write
@@ -463,6 +545,9 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			OpALU 	<= 6'B000000;
 			TypeJR   <= 1'B0;
 			WriteHD  <= 1'B1;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B011111: // Read
@@ -478,6 +563,9 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			OpALU 	<= 6'B000000;
 			TypeJR   <= 1'B0;
 			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B100000: // CLOSE_FILE
@@ -493,6 +581,9 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			OpALU 	<= 6'B000000;
 			TypeJR   <= 1'B0;
 			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			6'B100001: // KERNEL_SWAP
@@ -509,6 +600,8 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			TypeJR   <= 1'B0;
 			WriteHD  <= 1'B0;	
 		   Syscall_Sign <= 1'B1;
+			PID_wr   <= 1'B0;
+			Halt <= 1'B0;
 			end
 			
 			default: // Not operation
@@ -524,6 +617,9 @@ module UnidadedeControle(Opcode,OpIO,OpALU,MemRead,MemWrite,RegWrite,AluSrc,RegD
 			OpALU 	<= 6'B000000;
 			TypeJR   <= 1'B0;
 			WriteHD  <= 1'B0;
+			PID_wr   <= 1'B0;
+			Syscall_Sign <= 1'B0;
+			Halt <= 1'B0;
 			end
 		endcase
 	end

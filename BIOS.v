@@ -29,7 +29,7 @@ module BIOS
 	POST PostFirware(.addr(PC_PID),.clk(clk),.q(POST_Instr));
 				 
 	// Output depends only on the state
-	always @(*)
+	always @(state or Opcode or POST_Instr or BiosSign)
 	begin
 	
 		case (state)
