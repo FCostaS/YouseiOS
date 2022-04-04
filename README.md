@@ -1,3 +1,4 @@
 # Yousei-Processor
 
-My Processor with adjustments and preparation for the Operating System.
+My Operating System for FPGA.
+
